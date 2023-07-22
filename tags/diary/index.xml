@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>diary on CODENAME | EUNS</title>
+    <link>http://ganyunhee.github.io/tags/diary/</link>
+    <description>Recent content in diary on CODENAME | EUNS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 3&amp;4</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day3_4/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day3_4/</guid>
+      <description>학습내용 정리 Day 3 색깔의 표현 RGB (r, g, b) red, green, blue 값으로 색깔을 표현할 수 있다 RGBA (r, g, b, a) red, green, blue, alpha alpha는 opacity(투명도)를 표현한다 HEX (#FFFFFF) hexadecimal(16진수)로 표기한다
+0~9 -&amp;gt; A~F 범위 &amp;ndash; 0(Black), F(White)
+0에 가까울수록 해당 색깔이 어두워짐, F에 가까울 수록 해당 색깔이 밝아짐
+예) HEX to RGB 표현 #FF0000 &amp;ndash;&amp;gt; rgb(255, 0, 0) #00FF00 &amp;ndash;&amp;gt; rgb(0, 255, 0) #0000FF &amp;ndash;&amp;gt; rgb(0, 0, 255)</description>
+    </item>
+    
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 2</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day2/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day2/</guid>
+      <description>자기소개 피드백 + Daily 인사이트 &amp;ldquo;IT 기술의 한계&amp;rdquo; IT : 알면 알고, 모르면 모름. 다 될 것 같지만 못하는 것도 있다. (한계가 있음) 어떤 것을 만들 수 있는지, 못 만드는지 스스로 알고 판단해야 한다.
+&amp;ldquo;지금은 많이 요구하는 시대&amp;rdquo; 요즘 역량을 보고 뽑는 회사가 많아졌다. 남들과 다른 차별점을 가지고 있어야 한다.
+&amp;ldquo;모르면 모르고, 알면 왜 이걸 알아야 돼 (어떻게 알고 있고 어떻게 적용하지?)&amp;rdquo; 자기계발 및 기초다지기에는 지식을 아냐 모르냐 구별할 수 있는 실력이 있어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 1</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day1/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day1/</guid>
+      <description>Camp Course Summary FrontEnd, BackEnd, AI(PyTorch for Deep Learning, FastAPI for Server)
+이번 주 : HTML, CSS 다음 주 : Python 다다음 주 : SQL, Database Camp Study Goals 웹 개발 기초지식 습득하기 HTML, CSS 기초 문법 익히기 (스스로 배울 수 있는 수준 도달할 것) JavaScript 기초 문법 익히기, HTML&amp;amp;CSS 문서 조작(manipulate)할 수 있는 수준 도달할 것 SQL 기본 문법 (스스로 데이터를 정의할 수 있는 수준 도달할 것) Python 기본 문법 익히기 (데이터베이스와 통신할 수 있는 수준 도달할 것) 강의자료, 강사 소스코드 GitHub https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

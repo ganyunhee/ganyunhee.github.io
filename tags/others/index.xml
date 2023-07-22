@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>others on CODENAME | EUNS</title>
+    <link>http://ganyunhee.github.io/tags/others/</link>
+    <description>Recent content in others on CODENAME | EUNS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/others/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Installation &amp; GitHub Pages Theme Setting</title>
+      <link>http://ganyunhee.github.io/posts/hugo_init_setup/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/hugo_init_setup/</guid>
+      <description>A blog post for documenting the installation of Hugo on Windows 11 and setting up a Hugo theme for GitHub Pages.
+ref. https://www.youtube.com/watch?v=psyz4UPnGAA . https://gohugo.io/getting-started/quick-start/ .
+Prerequisites - Git - required to build Hugo from source- required to use hugo Modules feature- required to install a theme as a Git submodule- required to access commit information from local Git repo- required to host site (for GitHub Pages, GitLab Pages, Netlify, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

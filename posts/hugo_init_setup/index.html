@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Hugo Installation &amp; GitHub Pages Theme Setting - CODENAME | EUNS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://ganyunhee.github.iofavicon.png">
+  <link rel="canonical" href="http://ganyunhee.github.io/posts/hugo_init_setup/" />
+    
+    
+    <link rel="stylesheet" href="/css/style.min.2659c52892a977f15272a4f6dc1bb0a153fa2955518f94f60e77178e3096e704.css">
+    <link rel="stylesheet" href="/assets/css/extended.min.9729f28a5087b689b946e103d96abd63bfd37b1417effa251dbf798312e3fba5.css">
+
+  
+    
+    <meta property="og:title" content="Hugo Installation &amp; GitHub Pages Theme Setting"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ganyunhee.github.io/posts/hugo_init_setup/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    
+    
+  
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+
+  
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-home">
+                    <a href="http://ganyunhee.github.io/">Home</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-blog">
+                    <a href="http://ganyunhee.github.io/posts/">Blog</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-about">
+                    <a href="http://ganyunhee.github.io/pages/about/">About</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-tags">
+                    <a href="http://ganyunhee.github.io/tags/">Tags</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="/">CODENAME | EUNS</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      
+      
+      <li class="menu-item-home ">
+        <a href="/">
+          
+          <span>Home</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog ">
+        <a href="/posts/">
+          
+          <span>Blog</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-about ">
+        <a href="/pages/about/">
+          
+          <span>About</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-tags ">
+        <a href="/tags/">
+          
+          <span>Tags</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Hugo Installation &amp; GitHub Pages Theme Setting<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <p>A blog post for documenting the installation of Hugo on Windows 11 and setting up a Hugo theme for GitHub Pages.</p>
+<p>ref. <a href="https://www.youtube.com/watch?v=psyz4UPnGAA">https://www.youtube.com/watch?v=psyz4UPnGAA</a> . <a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a> .</p>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<h4 id="--git">- Git</h4>
+<pre><code>- required to build Hugo from source
+- required to use hugo Modules feature
+- required to install a theme as a Git submodule
+- required to access commit information from local Git repo
+- required to host site (for GitHub Pages, GitLab Pages, Netlify, etc.)
+</code></pre>
+<h4 id="---go">-  Go</h4>
+<pre><code>- required to build Hugo from source
+- required to use Hugo Modules feature
+</code></pre>
+<h4 id="--dart-sass">- Dart Sass</h4>
+<pre><code>- used to transpile Sass to CSS
+- install to use latest features of Hugo
+- compatible with Hugo v0.114.0 and later
+</code></pre>
+<h4 id="--chocolatey">- Chocolatey</h4>
+<pre><code>- Package Manager for Windows
+- used to install Hugo, Dart Sass
+</code></pre>
+<hr>
+<br>
+<h2 id="check-git-version">Check GIT version</h2>
+<p><img src="/posts/posts_images/hugo_install/git1.png" alt=""></p>
+<br>
+<h2 id="install-go">Install Go</h2>
+<p><a href="https://go.dev/doc/install">https://go.dev/doc/install</a></p>
+<p><img src="/posts/posts_images/hugo_install/go1.png" alt="">
+<img src="/posts/posts_images/hugo_install/go2.png" alt="">
+<img src="/posts/posts_images/hugo_install/go3.png" alt="">
+<img src="/posts/posts_images/hugo_install/go4.png" alt="">
+<img src="/posts/posts_images/hugo_install/go5.png" alt="">
+<img src="/posts/posts_images/hugo_install/go6.png" alt="">
+<img src="/posts/posts_images/hugo_install/go7.png" alt="">
+<img src="/posts/posts_images/hugo_install/go8.png" alt=""></p>
+<br>
+<h2 id="install-chocolatey-pm">Install Chocolatey PM</h2>
+<p><a href="https://chocolatey.org/install">https://chocolatey.org/install</a></p>
+<p><img src="/posts/posts_images/hugo_install/choco1.png" alt="">
+Open PowerShell as admin</p>
+<p>Run <code>Get-ExecutionPolicy</code>. If it returns <code>Restricted</code>, run <code>Set-ExecutionPolicy AllSigned</code> or <code>Set-ExecutionPolicy Bypass -Scope Process</code></p>
+<p><img src="/posts/posts_images/hugo_install/choco2.png" alt="">
+<img src="/posts/posts_images/hugo_install/choco3.png" alt="">
+<img src="/posts/posts_images/hugo_install/choco4.png" alt=""></p>
+<p>Run following command</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/choco5.png" alt=""></p>
+<p>Restart powershell (as admin).
+Type <code>choco</code> (if installed, shows installed version) or <code>choco -?</code> (shows instructions).</p>
+<p><img src="/posts/posts_images/hugo_install/choco6.png" alt=""></p>
+<br>
+<h2 id="install-dart-sass-via-chocolatey">Install Dart Sass via Chocolatey</h2>
+<p><a href="https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass">https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass</a>
+<a href="https://community.chocolatey.org/packages/sass">https://community.chocolatey.org/packages/sass</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">choco install sass
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/dart1.png" alt=""></p>
+<br>
+<h2 id="install-hugo-via-chocolatey">Install Hugo via Chocolatey</h2>
+<p>Install Hugo (Extended edition)</p>
+<p><a href="https://gohugo.io/installation/windows/">https://gohugo.io/installation/windows/</a>
+<a href="https://community.chocolatey.org/packages/hugo-extended">https://community.chocolatey.org/packages/hugo-extended</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">choco install hugo-extended
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/hugo1.png" alt=""></p>
+<p>Check hugo version</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/hugo2.png" alt=""></p>
+<p>Go to directory where files will be saved.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site blog
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/hugo3.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd [hugo_blog_folder_name]
+</span></span></code></pre></div><p>Start server. Check website contents.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/hugo4.png" alt=""></p>
+<p>Open http://localhost:1313
+(note. <code>Page Not Found</code> will appear due to no template. <code>Ctrl+C</code> to stop server)</p>
+<br>
+<h2 id="select-theme-from-hugo-themes">Select theme from Hugo Themes</h2>
+<p>Hugo Winston
+<a href="https://themes.gohugo.io/themes/hugo-winston-theme/">https://themes.gohugo.io/themes/hugo-winston-theme/</a>
+<a href="https://github.com/zerostaticthemes/hugo-winston-theme">https://github.com/zerostaticthemes/hugo-winston-theme</a></p>
+<ul>
+<li>uses Hugo Pipes (comes in extended version)</li>
+</ul>
+<p>Initialize git repo. Commit files to repo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git add.
+</span></span><span class="line"><span class="cl">git commit -m &#34;Initial commit&#34;
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/theme1.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="p">[</span><span class="na">hugo_theme_repo</span><span class="p">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/zerostaticthemes/hugo-winston-theme.git themes/hugo-winston-theme
+</span></span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/theme2.png" alt=""></p>
+<p>Edit hugo.toml (Hugo config file) on VS Code</p>
+<p><img src="/posts/posts_images/hugo_install/theme3.png" alt="">
+Edit <code>.toml</code> file as necessary. Refer to exampleSite folder in github repo for corresponding Hugo theme.</p>
+<p><a href="https://github.com/zerostaticthemes/hugo-winston-theme/tree/master/exampleSite">https://github.com/zerostaticthemes/hugo-winston-theme/tree/master/exampleSite</a></p>
+<p>Create post / content</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new content_name.md
+</span></span></code></pre></div><p><img src="/posts/posts_images/hugo_install/theme4.png" alt=""></p>
+<p>Edit md file on VS Code</p>
+<p><img src="/posts/posts_images/hugo_install/theme5.png" alt=""></p>
+<br>
+<h2 id="commit-changes-and-connect-to-github-pages-website">Commit changes and connect to GitHub Pages Website</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -M &#34;Update contents&#34;
+</span></span><span class="line"><span class="cl">git branch -M main
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/ganyunhee/ganyunhee.github.io
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></div><p>Create <code>.github/workflows/hugo.yaml</code></p>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<p>Copy and paste YAML contents from link above.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Sample workflow for building and deploying a Hugo site to GitHub Pages 
+</span></span><span class="line"><span class="cl">name: Deploy Hugo site to Pages 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">on: # Runs on pushes targeting the default branch 
+</span></span><span class="line"><span class="cl">	push: 
+</span></span><span class="line"><span class="cl">		branches: 
+</span></span><span class="line"><span class="cl">			- main # Allows you to run this workflow manually from the Actions tab 
+</span></span><span class="line"><span class="cl">	workflow_dispatch: # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages 
+</span></span><span class="line"><span class="cl">permissions: 
+</span></span><span class="line"><span class="cl">	contents: 
+</span></span><span class="line"><span class="cl">	read pages: write 
+</span></span><span class="line"><span class="cl">	id-token: write 
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued. 
+</span></span><span class="line"><span class="cl"># However, do NOT cancel in-progress runs as we want to allow these production deployments to complete. 
+</span></span><span class="line"><span class="cl">concurrency: 
+</span></span><span class="line"><span class="cl">	group: &#34;pages&#34; 
+</span></span><span class="line"><span class="cl">	cancel-in-progress: false 
+</span></span><span class="line"><span class="cl"># Default to bash 
+</span></span><span class="line"><span class="cl">defaults: 
+</span></span><span class="line"><span class="cl">	run: 
+</span></span><span class="line"><span class="cl">		shell: bash 
+</span></span><span class="line"><span class="cl">jobs: 
+</span></span><span class="line"><span class="cl">	# Build job
+</span></span><span class="line"><span class="cl">	build: 
+</span></span><span class="line"><span class="cl">		runs-on: ubuntu-latest 
+</span></span><span class="line"><span class="cl">		env: 
+</span></span><span class="line"><span class="cl">			HUGO_VERSION: 0.115.1 
+</span></span><span class="line"><span class="cl">		steps: 
+</span></span><span class="line"><span class="cl">			- name: Install Hugo CLI 
+</span></span><span class="line"><span class="cl">			  run: | 
+</span></span><span class="line"><span class="cl">				  wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \ 
+</span></span><span class="line"><span class="cl">				  &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb 
+</span></span><span class="line"><span class="cl">			- name: Install Dart Sass 
+</span></span><span class="line"><span class="cl">			  run: sudo snap install dart-sass 
+</span></span><span class="line"><span class="cl">			- name: Checkout 
+</span></span><span class="line"><span class="cl">			  uses: actions/checkout@v3
+</span></span><span class="line"><span class="cl">			  with: 
+</span></span><span class="line"><span class="cl">				  submodules: recursive 
+</span></span><span class="line"><span class="cl">				  fetch-depth: 0 
+</span></span><span class="line"><span class="cl">		    - name: Setup Pages 
+</span></span><span class="line"><span class="cl">		      id: pages 
+</span></span><span class="line"><span class="cl">		      uses: actions/configure-pages@v3 
+</span></span><span class="line"><span class="cl">		    - name: Install Node.js dependencies 
+</span></span><span class="line"><span class="cl">		      run: &#34;[[ -f package-lock.json || -f npm-shrinkwrap.json ]] &amp;&amp; npm ci || true&#34; 
+</span></span><span class="line"><span class="cl">		    - name: Build with Hugo env: # For maximum backward compatibility with Hugo modules 
+</span></span><span class="line"><span class="cl">			    HUGO_ENVIRONMENT: production 
+</span></span><span class="line"><span class="cl">			    HUGO_ENV: production 
+</span></span><span class="line"><span class="cl">			  run: | 
+</span></span><span class="line"><span class="cl">				  hugo \ 
+</span></span><span class="line"><span class="cl">				  --gc \ 
+</span></span><span class="line"><span class="cl">				  --minify \ 
+</span></span><span class="line"><span class="cl">				  --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34; 
+</span></span><span class="line"><span class="cl">		    - name: Upload artifact 
+</span></span><span class="line"><span class="cl">		      uses: actions/upload-pages-artifact@v1 
+</span></span><span class="line"><span class="cl">		      with: 
+</span></span><span class="line"><span class="cl">			      path: ./public 
+</span></span><span class="line"><span class="cl">			      
+</span></span><span class="line"><span class="cl"># Deployment job 
+</span></span><span class="line"><span class="cl">deploy: 
+</span></span><span class="line"><span class="cl">	environment: 
+</span></span><span class="line"><span class="cl">		name: github-pages 
+</span></span><span class="line"><span class="cl">		url: ${{ steps.deployment.outputs.page_url }} 
+</span></span><span class="line"><span class="cl">	runs-on: ubuntu-latest 
+</span></span><span class="line"><span class="cl">	needs: build 
+</span></span><span class="line"><span class="cl">	steps: 
+</span></span><span class="line"><span class="cl">		- name: Deploy to GitHub Pages 
+</span></span><span class="line"><span class="cl">		  id: deployment
+</span></span><span class="line"><span class="cl">		  uses: actions/deploy-pages@v2
+</span></span></code></pre></div><br>
+<h2 id="others">Others</h2>
+<hr>
+<p>How to remove non-empty dir in PowerShell
+<a href="https://stackoverflow.com/questions/1752677/how-to-recursively-delete-an-entire-directory-with-powershell-2-0">https://stackoverflow.com/questions/1752677/how-to-recursively-delete-an-entire-directory-with-powershell-2-0</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rm -r -fo &#39;dir_path&#39;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Remove-Item -Recurse -Force &#39;dir_path&#39;
+</span></span></code></pre></div>
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/ganyunhee/" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+    <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+</body>
+</html>
