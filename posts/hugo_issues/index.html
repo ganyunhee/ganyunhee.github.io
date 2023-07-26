@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Hugo Template Issues - CODENAME | EUNS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://ganyunhee.github.iofavicon.png">
+  <link rel="canonical" href="http://ganyunhee.github.io/posts/hugo_issues/" />
+    
+    
+    <link rel="stylesheet" href="/css/style.min.53cc28b9418ccfd52aef5b777355aebd3453c9c49e384d73246546bea383f822.css">
+    <link rel="stylesheet" href="/assets/css/extended.min.9729f28a5087b689b946e103d96abd63bfd37b1417effa251dbf798312e3fba5.css">
+
+  
+    
+    <meta property="og:title" content="Hugo Template Issues"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ganyunhee.github.io/posts/hugo_issues/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    
+    
+  
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira&#43;Mono&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+
+  
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-home">
+                    <a href="http://ganyunhee.github.io/">Home</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-blog">
+                    <a href="http://ganyunhee.github.io/posts/">Blog</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-about">
+                    <a href="http://ganyunhee.github.io/pages/about/">About</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-tags">
+                    <a href="http://ganyunhee.github.io/tags/">Tags</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="/">CODENAME | EUNS</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      
+      
+      <li class="menu-item-home ">
+        <a href="/">
+          
+          <span>Home</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog ">
+        <a href="/posts/">
+          
+          <span>Blog</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-about ">
+        <a href="/pages/about/">
+          
+          <span>About</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-tags ">
+        <a href="/tags/">
+          
+          <span>Tags</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Hugo Template Issues<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <h2 id="사이트-깨짐-eg-home-페이지">사이트 깨짐 (e.g. Home 페이지)</h2>
+<hr>
+<ul>
+<li>resources folder delete (save copy as backup)</li>
+<li>re-add resources folder</li>
+</ul>
+<p>Probable reason:</p>
+<ol>
+<li>site generator problems (theme site generator generates resource folder)</li>
+<li>Hugo theme problem</li>
+<li>GitHub Pages reading problem</li>
+</ol>
+<br>
+<h2 id="404-not-found">404 Not Found</h2>
+<hr>
+<ul>
+<li>due to editing <code>themes/assets/_content.scss</code></li>
+</ul>
+<p>Initial Solution (Succeeded then Failed)</p>
+<ul>
+<li>
+<p>copy assets folder to path outside of themes folder (i.e. copy to website root folder)</p>
+</li>
+<li>
+<p>edit those assets (not assets in themes folder)</p>
+</li>
+<li>
+<p>after adding .md (Day3&amp;4)</p>
+</li>
+<li>
+<p>deleted then re-added resources folder, then commit and push empty commit &ldquo;trigger rebuild &ndash;&gt; FAIL</p>
+</li>
+</ul>
+<br>
+<h2 id="404-not-found---solution-final">404 Not Found - SOLUTION (FINAL)</h2>
+<hr>
+<h4 id="research">Research</h4>
+<p>&ldquo;hugo template working on hugo server but 404 not found on github pages&rdquo; - Google Search Keyword</p>
+<h4 id="ref-1">Ref 1.</h4>
+<p>Hugo site starts locally, only displays 404 on hosted GH page
+<a href="https://stackoverflow.com/questions/56623432/hugo-site-starts-locally-only-displays-404-on-hosted-gh-page">https://stackoverflow.com/questions/56623432/hugo-site-starts-locally-only-displays-404-on-hosted-gh-page</a></p>
+<p>&ldquo;Meaning what you should be pushing if, from your <code>public</code> subfolder, only what Hugo has generated.</p>
+<p>You should <em>not</em> push your Hugo project (<code>config.toml</code>, <code>themes</code>, and so on): those should be pushed in a separate GitHub repository for safekeeping and versionning.&rdquo;</p>
+<p>==<strong>IDEA. Need to separate content and .toml, themes folder. Must only push project and not Hugo essential files to deployment.</strong>==</p>
+<h4 id="ref-2">Ref 2.</h4>
+<p>Github action deploy development branch to subdir of master bracnh
+<a href="https://stackoverflow.com/questions/72857383/github-action-deploy-development-branch-to-subdir-of-master-bracnh/73311701#73311701">https://stackoverflow.com/questions/72857383/github-action-deploy-development-branch-to-subdir-of-master-bracnh/73311701#73311701</a></p>
+<blockquote>
+<p>&quot; Considering that &ldquo;<a href="https://github.blog/2022-08-10-github-pages-now-uses-actions-by-default/">GitHub Pages now uses Actions by default</a>&rdquo; &quot;</p>
+<p>With the shift to GitHub Actions, GitHub Pages are now tracking deployments instead of builds.</p>
+<p>A source branch is not required anymore and is at the discretion of a workflow’s triggers.  We’ve made it so a deployment must happen in the context of an environment (<code>github-pages</code> by default).</p>
+</blockquote>
+<p>==<strong>IDEA. No need to define workflow into .yaml file</strong>==</p>
+<h4 id="method">Method</h4>
+<ul>
+<li>backup files to another folder then delete from github.io local folder, commit and push changes to repo</li>
+<li>create README.md on github.io repo (optional - need at least one commit in github.io repo)</li>
+<li>create new blog repo, git clone to local folder (blog_files)</li>
+<li>hugo new site (blog_site) to blog local folder, add posts to blog local folder, edit or copy existing hugo.toml for blog configuration</li>
+<li>open hugo site folder (blog_site), git submodule add theme repo to blog_site/themes</li>
+<li>add assets/scss/_content.scss to local blog folder (after editing code block color)</li>
+<li>test via hugo server</li>
+<li>git submodule add -b main [github.io repo .git link] public &ndash; connect github.io repo to public folder, push from public folder will add changes to github.io repo</li>
+<li>do hugo -t [theme_name] &ndash; adds theme files to public folder</li>
+<li>open public folder then commit and push changes</li>
+</ul>
+<p><code>NOTE. Did not add .github/workflow/hugo.yaml and let github actions deploy automatically.</code></p>
+<h4 id="ref-method">Ref. Method</h4>
+<p>Creating a Blog with Hugo and Github in 10 minutes by <a href="https://www.youtube.com/@TheSimpleEngineer">Ryan Schachte</a>
+<a href="https://www.youtube.com/watch?v=LIFvgrRxdt4">https://www.youtube.com/watch?v=LIFvgrRxdt4</a></p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/ganyunhee/" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+    <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+</body>
+</html>

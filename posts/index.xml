@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo Template Issues</title>
+      <link>http://ganyunhee.github.io/posts/hugo_issues/</link>
+      <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/hugo_issues/</guid>
+      <description>사이트 깨짐 (e.g. Home 페이지) resources folder delete (save copy as backup) re-add resources folder Probable reason:
+site generator problems (theme site generator generates resource folder) Hugo theme problem GitHub Pages reading problem 404 Not Found due to editing themes/assets/_content.scss Initial Solution (Succeeded then Failed)
+copy assets folder to path outside of themes folder (i.e. copy to website root folder)
+edit those assets (not assets in themes folder)
+after adding .</description>
+    </item>
+    
+    <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 6&amp;7</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day6_7/</link>
       <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
@@ -56,7 +69,7 @@ Add referral links to blog post items Referral links were added to each item und
       <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>http://ganyunhee.github.io/posts/hugo_init_setup/</guid>
-      <description>A blog post for documenting the installation of Hugo on Windows 11 and setting up a Hugo theme for GitHub Pages.
+      <description>A blog post for documenting the installation of Hugo on Windows 11 and setting up a Hugo theme for GitHub Pages.&amp;quot;
 ref. https://www.youtube.com/watch?v=psyz4UPnGAA . https://gohugo.io/getting-started/quick-start/ .
 Prerequisites - Git - required to build Hugo from source- required to use hugo Modules feature- required to install a theme as a Git submodule- required to access commit information from local Git repo- required to host site (for GitHub Pages, GitLab Pages, Netlify, etc.</description>
     </item>
