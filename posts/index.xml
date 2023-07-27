@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 8</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day8/</link>
+      <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day8/</guid>
+      <description>과제 &amp;gt; this keyword Original Code var person = { name: &amp;#34;홍길동&amp;#34;, birthday: &amp;#34;030219&amp;#34;, age: 30, pId: &amp;#34;1234567&amp;#34;, fullId: function() { return this.birthday + this.pId; } }; person.fullId() // 0302191234567 person.fullId; // function () { return this.birthday + this.pId; } //생성자(constructor)를 이용한 객체 생성 var day = new Date(); // new 연산자를 사용하여 Date 타입의 객체를 생성함. console.log(&amp;#34;올해는 &amp;#34; + day.getFullYear() + &amp;#34;년입니다.&amp;#34;); Edited Code var person = { name: &amp;#34;홍길동&amp;#34;, birthday: &amp;#34;030219&amp;#34;, age: 30, pId: &amp;#34;1234567&amp;#34;, fullId: function() { return birthday + pId; } }; 위 코드에 따라 person 객체 안에 있는 fullID 함수를 아래처럼 호출하면 ReferenceError가 발생된다.</description>
+    </item>
+    
+    <item>
       <title>Hugo Template Issues</title>
       <link>http://ganyunhee.github.io/posts/hugo_issues/</link>
       <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
