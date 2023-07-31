@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 9</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day9/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day9/</guid>
+      <description>JavaScript : DOM Element, Web API 과제 주제 1. DOM element 분석 HTML 문서 앞에 &amp;lt;script&amp;gt; 태그 내에 js코드를 작성했고, 문서가 로드 되기 전에 script의 element를 가져오지 못한 상태에서 console.log로 디버그하여 개발자도구에 확인해보았을때는 왜 element를 가져와졌는지 이유에 대해서 알아보기.
+참고 코드는 아래에 첨부합니다.
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=“ko”&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=“UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;JavaScript DOM Element&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; //HTML 태그 이름을 이용한 선택 console.log(‘aaa’) var selectedItem = document.getElementsByTagName(“li”); // 모든 &amp;lt;li&amp;gt; 요소를 선택함. console.log(selectedItem) console.</description>
+    </item>
+    
+    <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 8</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day8/</link>
       <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>

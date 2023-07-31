@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 9 - CODENAME | EUNS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://ganyunhee.github.iofavicon.png">
+  <link rel="canonical" href="http://ganyunhee.github.io/posts/aiweb_day9/" />
+    
+    
+    <link rel="stylesheet" href="/css/style.min.53cc28b9418ccfd52aef5b777355aebd3453c9c49e384d73246546bea383f822.css">
+    <link rel="stylesheet" href="/assets/css/extended.min.9729f28a5087b689b946e103d96abd63bfd37b1417effa251dbf798312e3fba5.css">
+
+  
+    
+    <meta property="og:title" content="[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 9"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ganyunhee.github.io/posts/aiweb_day9/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    
+    
+  
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira&#43;Mono&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+
+  
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-home">
+                    <a href="http://ganyunhee.github.io/">Home</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-blog">
+                    <a href="http://ganyunhee.github.io/posts/">Blog</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-about">
+                    <a href="http://ganyunhee.github.io/pages/about/">About</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-tags">
+                    <a href="http://ganyunhee.github.io/tags/">Tags</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="/">CODENAME | EUNS</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      
+      
+      <li class="menu-item-home ">
+        <a href="/">
+          
+          <span>Home</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog ">
+        <a href="/posts/">
+          
+          <span>Blog</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-about ">
+        <a href="/pages/about/">
+          
+          <span>About</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-tags ">
+        <a href="/tags/">
+          
+          <span>Tags</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 9<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <h1 id="javascript--dom-element-web-api">JavaScript : DOM Element, Web API</h1>
+<h1 id="과제">과제</h1>
+<hr>
+<br>
+<h1 id="주제-1-dom-element-분석">주제 1. DOM element 분석</h1>
+<p>HTML 문서 앞에 <code>&lt;script&gt;</code> 태그 내에 js코드를 작성했고, 문서가 로드 되기 전에 script의 element를 가져오지 못한 상태에서 console.log로 디버그하여 개발자도구에 확인해보았을때는 왜 element를 가져와졌는지 이유에 대해서 알아보기.</p>
+<p>참고 코드는 아래에 첨부합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">&lt;html lang=“ko”&gt;
+</span></span><span class="line"><span class="cl">&lt;head&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta charset=“UTF-8&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;title&gt;JavaScript DOM Element&lt;/title&gt;
+</span></span><span class="line"><span class="cl">    &lt;script&gt;
+</span></span><span class="line"><span class="cl">        //HTML 태그 이름을 이용한 선택
+</span></span><span class="line"><span class="cl">        console.log(‘aaa’)
+</span></span><span class="line"><span class="cl">        var selectedItem = document.getElementsByTagName(“li”);     // 모든 &lt;li&gt; 요소를 선택함.
+</span></span><span class="line"><span class="cl">        console.log(selectedItem)
+</span></span><span class="line"><span class="cl">        console.log(selectedItem.length)
+</span></span><span class="line"><span class="cl">        for (var i = 0; i &lt; selectedItem.length; i++) {
+</span></span><span class="line"><span class="cl">            selectedItem.item(i).style.color = “red”;   // 선택된 모든 요소의 텍스트 색상을 변경함.
+</span></span><span class="line"><span class="cl">            console.log(selectedItem.item(i));
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    &lt;/script&gt;
+</span></span><span class="line"><span class="cl">&lt;/head&gt;
+</span></span><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">    &lt;h1&gt;HTML 태그 이름을 이용한 선택&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">    &lt;ul&gt;
+</span></span><span class="line"><span class="cl">        &lt;li&gt;첫 번째 아이템이에요!&lt;/li&gt;
+</span></span><span class="line"><span class="cl">        &lt;li&gt;두 번째 아이템이에요!&lt;/li&gt;
+</span></span><span class="line"><span class="cl">        &lt;li&gt;세 번째 아이템이에요!&lt;/li&gt;
+</span></span><span class="line"><span class="cl">        &lt;li&gt;네 번째 아이템이에요!&lt;/li&gt;
+</span></span><span class="line"><span class="cl">        &lt;li&gt;다섯 번째 아이템이에요!&lt;/li&gt;
+</span></span><span class="line"><span class="cl">    &lt;/ul&gt;
+</span></span><span class="line"><span class="cl">    &lt;script&gt;
+</span></span><span class="line"><span class="cl">        var selectedItem = document.getElementsByTagName(“li”);     // 모든 &lt;li&gt; 요소를 선택함.
+</span></span><span class="line"><span class="cl">        for (var i = 0; i &lt; selectedItem.length; i++) {
+</span></span><span class="line"><span class="cl">            selectedItem.item(i).style.color = “red”;   // 선택된 모든 요소의 텍스트 색상을 변경함.
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    &lt;/script&gt;
+</span></span><span class="line"><span class="cl">&lt;/body&gt;
+</span></span><span class="line"><span class="cl">&lt;/html&gt;
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day9/elements.png" alt=""></p>
+<p>HTML 문서가 로드되기 전에 <code>document.getElementsByTagName(&quot;li&quot;)</code>를 통해 elements가 fetch되는 이유는 JavaScript 코드 실행 순서와 HTML 파싱과 관련이 있다.</p>
+<p>브라우저로 html 파일을 열고 브라우저가 <code>&lt;script&gt;</code> 태그를 읽게 되면 즉시 JavaScript 코드를 실행하기 시작한다. 따라서 <code>document.getElementsByTagName(&quot;li&quot;)</code>로 요소를 가져오는 코드가 전체 HTML 문서를 파싱하고 로드하기 전에 실행된다.</p>
+<p>단, 코드가 일찍 실행되더라도 스크립트는 실제 <code>&lt;ul&gt;</code> 및 <code>&lt;li&gt;</code> 요소가 만나기 전에 실행되기 때문에 실행 시점에서 요소들이 DOM에 추가되지 않은 상태이다. <code>console.log()</code> 문은 여전히 요소들을 가져왔다는 것을 보여줄 것이지만, DOM에 완전히 로드되기 전이기 때문에 빈 NodeList 또는 요소의 완전한 표현이 아닐 수 있다.</p>
+<p>동일한 코드를 <code>&lt;body&gt;</code> 섹션의 끝인 <code>&lt;/body&gt;</code> 태그 바로 앞에서 실행하면, 전체 HTML 문서가 파싱되고 DOM에 요소가 존재할 때 스크립트가 실행된다. 따라서 요소를 가져오고 조작할 수 있다.</p>
+<p>DOM에 아직 존재하지 않은 요소를 가져오는 가능성을 피하기 위해 일반적으로 DOM과 상호작용하는 JavaScript 코드를 <code>&lt;body&gt;</code> 섹션의 끝에 배치하거나 <code>DOMContentLoaded</code> 이벤트를 사용하여 스크립트가 실행되기 전에 DOM이 완전히 로드된 것을 확인하는 것이 좋다. 이렇게 하면 스크립트가 실행될 때 해당하는 요소가 DOM에 존재하는 것이 보장된다.</p>
+<h1 id="주제-2-web-api-사용">주제 2. Web API 사용</h1>
+<ul>
+<li>OpenWeather API - 일기예보 정보 가져오는 API (Weather 위젯을 만들기 위해 사용할 API)
+<a href="https://openweathermap.org/api">https://openweathermap.org/api</a></li>
+<li>Inspiration - Tyler Galpin의 포트폴리오 사이트
+<a href="https://www.galp.in/">https://www.galp.in/</a></li>
+<li>Implementation References
+<ul>
+<li>ASMR Programming - Weather App With Javascript. <a href="https://youtu.be/iILFBGm_I9M">https://youtu.be/iILFBGm_I9M</a></li>
+<li>Build a Real-Time Weather App with JavaScript and OpenWeatherMap API. <a href="https://javascript.plainenglish.io/build-a-real-time-weather-app-with-javascript-and-openweathermap-api-bcf8111df1fe">https://javascript.plainenglish.io/build-a-real-time-weather-app-with-javascript-and-openweathermap-api-bcf8111df1fe</a></li>
+<li>Creating a Weather app in Node.js using the Openweathermap API. <a href="https://www.section.io/engineering-education/create-a-weather-app-in-nodejs-using-openweathermap-api/">https://www.section.io/engineering-education/create-a-weather-app-in-nodejs-using-openweathermap-api/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="sign-in">Sign-In</h2>
+<p>API를 사용하기 위해 로그인이 필요한 서비스 API입니다. 아직 계정이 없어서 먼저 회원가입~
+Username, Email, Password 기입, 권한 동의, 사용용도 입력 등 회원가입 과정 끝나고 나서 로그인을 했습니다.</p>
+<h2 id="about-openweather">About OpenWeather</h2>
+<p>나라 또는 어떤 시에 따라 일기예보 정보를 가져오는 API입니다. 데일리 또는 8일 일기예보, 온도, 습기, 자외선 등 현재 날씨 데이터 뿐만 아니라 과거 기상 데이터나 예상 날씨 데이터까지 알려줄 수 있습니다. 유료 서비스도 제공되고 있지만 이번에는 간단한 날씨 위젯(Weather Widget)을 만들기 위해 하루 1분에 약 60번의 API 호출을 허락하 무료 서비스를 이용해 보겠습니다. API 호출해서 위젯을 구현해 보고 전에 이미 만들었던 메인 페이지에 기능으로 추가하도록 하겠습니다.</p>
+<p><img src="/posts/posts_images/aiweb_day9/openweather_plan.png" alt=""></p>
+<h2 id="weather-widget-만들기-과정">Weather Widget 만들기 과정</h2>
+<h3 id="메인-페이지-업데이트">메인 페이지 업데이트</h3>
+<p>우선 메인 페이지에서 날짜와 시간, 일기예보를 텍스트로 표시할 수 있도록 코드를 수정해서 공간을 만들었습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;misc&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>July #, 2023<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;time&#34;</span><span class="p">&gt;</span>00:00<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;weather&#34;</span><span class="p">&gt;</span>The weather is ...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day9/api_prep1.png" alt=""></p>
+<p><img src="/posts/posts_images/aiweb_day9/api_prep2.png" alt=""></p>
+<h3 id="자바스크립트-파일-만들기---weatherjs">자바스크립트 파일 만들기 - weather.js</h3>
+<p>자바스크립트 (.js) 파일 만들고 HTML 파일 안에서 <code>&lt;script&gt;</code> 태그를 사용하여 파일을 참고합니다.</p>
+<p><img src="/posts/posts_images/aiweb_day9/weather_js.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;weather.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="자바스크립트-파일-안에서-api-호출">자바스크립트 파일 안에서 API 호출</h3>
+<p>우선 OpenWeather 홈페이지에서 시의 이름을 입력하여 데이터베이스에 포함되어 있는지 확인했습니다.
+<a href="https://openweathermap.org/city/1835848">https://openweathermap.org/city/1835848</a></p>
+<p><img src="/posts/posts_images/aiweb_day9/openweather_city.png" alt=""></p>
+<p>Seoul에 대한 날씨 데이터가 잘 나타나는 것을 확인했으니 이제 API를 호출해서 가져오면 될 것 같네요!
+API를 호출하는 방식을 배우도록 가이드를 홈페이지 안에 제공된 가이드를 참고했습니다.
+<a href="https://openweathermap.org/guide">https://openweathermap.org/guide</a>, <a href="https://openweathermap.org/appid">https://openweathermap.org/appid</a></p>
+<p>그 다음, API를 호출하기 위해 사용할 API Key를 확인하고 복사합니다.</p>
+<p><img src="/posts/posts_images/aiweb_day9/openweather_apikey.png" alt=""></p>
+<p><code>fetch()</code> 를 이용하여 API 호출해 보겠습니다. <code>city</code>와 <code>APIKey</code>라는 변수를 다로 선언하고 다음과 같이 API를 호출합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&amp;units=metric&amp;appid=${APIKey}`)
+</span></span></code></pre></div><p>호출하는 API 링크를 접속하여 JSON 데이터 또는 내용이 제대로 나타나는지 한번만 확인!
+(아래 내용은 실시간에 따라 변경됩니다.)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;coord&#34;</span><span class="p">:{</span><span class="nt">&#34;lon&#34;</span><span class="p">:</span><span class="mf">126.9778</span><span class="p">,</span><span class="nt">&#34;lat&#34;</span><span class="p">:</span><span class="mf">37.5683</span><span class="p">},</span><span class="nt">&#34;weather&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">802</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:</span><span class="s2">&#34;Clouds&#34;</span><span class="p">,</span><span class="nt">&#34;description&#34;</span><span class="p">:</span><span class="s2">&#34;scattered clouds&#34;</span><span class="p">,</span><span class="nt">&#34;icon&#34;</span><span class="p">:</span><span class="s2">&#34;03n&#34;</span><span class="p">}],</span><span class="nt">&#34;base&#34;</span><span class="p">:</span><span class="s2">&#34;stations&#34;</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:{</span><span class="nt">&#34;temp&#34;</span><span class="p">:</span><span class="mf">25.71</span><span class="p">,</span><span class="nt">&#34;feels_like&#34;</span><span class="p">:</span><span class="mf">26.66</span><span class="p">,</span><span class="nt">&#34;temp_min&#34;</span><span class="p">:</span><span class="mf">24.76</span><span class="p">,</span><span class="nt">&#34;temp_max&#34;</span><span class="p">:</span><span class="mf">26.78</span><span class="p">,</span><span class="nt">&#34;pressure&#34;</span><span class="p">:</span><span class="mi">1014</span><span class="p">,</span><span class="nt">&#34;humidity&#34;</span><span class="p">:</span><span class="mi">89</span><span class="p">},</span><span class="nt">&#34;visibility&#34;</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span><span class="nt">&#34;wind&#34;</span><span class="p">:{</span><span class="nt">&#34;speed&#34;</span><span class="p">:</span><span class="mf">1.54</span><span class="p">,</span><span class="nt">&#34;deg&#34;</span><span class="p">:</span><span class="mi">240</span><span class="p">},</span><span class="nt">&#34;clouds&#34;</span><span class="p">:{</span><span class="nt">&#34;all&#34;</span><span class="p">:</span><span class="mi">40</span><span class="p">},</span><span class="nt">&#34;dt&#34;</span><span class="p">:</span><span class="mi">1690745621</span><span class="p">,</span><span class="nt">&#34;sys&#34;</span><span class="p">:{</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">8105</span><span class="p">,</span><span class="nt">&#34;country&#34;</span><span class="p">:</span><span class="s2">&#34;KR&#34;</span><span class="p">,</span><span class="nt">&#34;sunrise&#34;</span><span class="p">:</span><span class="mi">1690749266</span><span class="p">,</span><span class="nt">&#34;sunset&#34;</span><span class="p">:</span><span class="mi">1690800144</span><span class="p">},</span><span class="nt">&#34;timezone&#34;</span><span class="p">:</span><span class="mi">32400</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">1835848</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Seoul&#34;</span><span class="p">,</span><span class="nt">&#34;cod&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">}</span>
+</span></span></code></pre></div><h2 id="html-원소를-업데이트하는-함수-만들기">HTML 원소를 업데이트하는 함수 만들기</h2>
+<p><code>querSelector</code>를 이용하여 HTML 파일 안에 만든 element들을 모두 select하고 JS 파일 안에서 접근할 수 있기 위해 객체를 변수에 저장합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">weatherElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.weather&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">highTempElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.high_temp&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">lowTempElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.low_temp&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">cityElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.city&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>JSON 데이터를 참고하면서 HTML 원소들의 내용을 맞는 데이터로 변경하고 업데이트해줍니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">weatherElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">weatherData</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">description</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">highTempElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">weatherData</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp_max</span><span class="p">)</span><span class="si">}</span><span class="sb">°C`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">lowTempElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">weatherData</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp_min</span><span class="p">)</span><span class="si">}</span><span class="sb">°C`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cityElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">city</span><span class="p">;</span>
+</span></span></code></pre></div><p>최종 함수는 다음과 같이 완성됩니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">updateWeatherDetails</span><span class="p">(</span><span class="nx">weatherData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">weatherElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.weather&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">highTempElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.high_temp&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">lowTempElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.low_temp&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">cityElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.city&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">weatherElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">weatherData</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">description</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">highTempElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">weatherData</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp_max</span><span class="p">)</span><span class="si">}</span><span class="sb">°C`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lowTempElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">weatherData</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp_min</span><span class="p">)</span><span class="si">}</span><span class="sb">°C`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">cityElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">city</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="fetch하고-할-일에-대해-코드-작성">fetch하고 할 일에 대해 코드 작성</h2>
+<p>API의 url을 접속해서 JSON 데이터를 가져온 후 HTML 원소들의 내용을 업데이트하는 함수를 부릅니다. 만약 데이터를 fetch하는 동안 에러가 발생하면 에러 내용을 콘솔창에 출력하도록 했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">${</span><span class="nx">city</span><span class="si">}</span><span class="sb">&amp;units=metric&amp;appid=</span><span class="si">${</span><span class="nx">APIKey</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">updateWeatherDetails</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span></code></pre></div><h1 id="date--time-표시">Date &amp; Time 표시</h1>
+<h2 id="html-파일에서-레이아웃-구성하기">HTML 파일에서 레이아웃 구성하기</h2>
+<p>아까 준비한 텍스트 공간의 내용을 수정해서 글 사이에 month, day, year를 각자 표시할 수 있도록 <code>&lt;span&gt;</code> 요소를 추가합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!--Date--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	On <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;month&#34;</span><span class="p">&gt;</span>Month <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;day&#34;</span><span class="p">&gt;</span>#, <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;year&#34;</span><span class="p">&gt;</span>yyyy<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--Time--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;time_details&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	It&#39;s <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;time&#34;</span><span class="p">&gt;</span>00:00<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;am_pm&#34;</span><span class="p">&gt;</span>AM/PM<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="자바스크립트-파일-새로-만들기---date_timejs">자바스크립트 파일 새로 만들기 - date_time.js</h2>
+<p><img src="/posts/posts_images/aiweb_day9/date_time_js.png" alt=""></p>
+<p><code>date_time.js</code> 파일 안에서 현재 날짜와 시간 데이터를 가져오고 HTML 내용을 업데이트하는 함수를 구현해 보겠습니다.</p>
+<p>우선 <code>querySelector</code>를 다시 사용해서 HTML에 있는 element들을 select하기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">dateElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.date&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">timeElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.time&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">amPmElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.am_pm&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>현재 날짜와 시간을 알 수 있도록 JavaScript에서 제공되는 Built-in 객체 <code>Date</code> 를 활용할 예정이니 쉽게 접근할 수 있도록 <code>now</code>라는 변수에 저장해 두겠습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span></span></code></pre></div><p><code>now.getMonth()</code> 는 당월을 숫자로 나타내기 때문에 array를 만들어서 각 월의 영어 이름을 모읍니다.
+ref. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">months</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;January&#39;</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;April&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;June&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;July&#39;</span><span class="p">,</span> <span class="s1">&#39;August&#39;</span><span class="p">,</span> <span class="s1">&#39;September&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;October&#39;</span><span class="p">,</span> <span class="s1">&#39;November&#39;</span><span class="p">,</span> <span class="s1">&#39;December&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><p>이 array를 참고하여 <code>now.getMonth()</code>에서 return할 값을 index로 가정하고 그 index에 해당하는 월의 이름을 가져오는 방식으로 당월을 표시할 것입니다. 아래와 같이 month, day, year를 표시했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">monthElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.month&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">monthElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">months</span><span class="p">[</span><span class="nx">now</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">dayElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.day&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dayElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">now</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="si">}</span><span class="sb">,`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">yearElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.year&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">yearElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
+</span></span></code></pre></div><p>그 다음으로, AM 또는 PM을 표시하기 위해 현재 hour에 따라 정오(12시)가 지났는지 확인하는 방식을 사용했고, 시간을 12시간제(12-hour format)로 표시하도록 코드를 작성했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">hours</span> <span class="o">=</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">amPm</span> <span class="o">=</span> <span class="nx">hours</span> <span class="o">&gt;=</span> <span class="mi">12</span> <span class="o">?</span> <span class="s1">&#39;PM&#39;</span> <span class="o">:</span> <span class="s1">&#39;AM&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// change to 12-hour format
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hours</span> <span class="o">=</span> <span class="nx">hours</span> <span class="o">%</span> <span class="mi">12</span> <span class="o">||</span> <span class="mi">12</span><span class="p">;</span>
+</span></span></code></pre></div><p>형식을 변경한 후 시간과 AM/PM에 해당하는 HTML 원소의 내용을 업데이트했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">timeElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">hours</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">padStart</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">:</span><span class="si">${</span><span class="nx">now</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">().</span><span class="nx">toString</span><span class="p">().</span><span class="nx">padStart</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">amPmElement</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">amPm</span><span class="p">;</span>
+</span></span></code></pre></div><p>이후 페이지를 접속하자마자 날짜 및 시간을 표시할 수 있도록 함수를 호출했고</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">updateDateTime</span><span class="p">();</span>
+</span></span></code></pre></div><p>실시간으로 날짜 및 시간 데이터가 업데이트될 수 있도록 타이머를 추가했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// update date and time every second
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">updateDateTime</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span></code></pre></div><p><br><br></p>
+<h1 id="final-output">Final Output</h1>
+<hr>
+<p><img src="/posts/posts_images/aiweb_day9/weather_date_time.png" alt=""></p>
+<p><br><br></p>
+<h1 id="todo-다른-api-추가">TODO. 다른 API 추가</h1>
+<ul>
+<li>언어를 번역하는 API (esp. ENG, KOR)
+<ul>
+<li>translate-api
+<ul>
+<li>ref. <a href="https://www.npmjs.com/package/translate-api?activeTab=readme">https://www.npmjs.com/package/translate-api?activeTab=readme</a>, <a href="https://github.com/yixianle/translate-api#readme">https://github.com/yixianle/translate-api#readme</a></li>
+</ul>
+</li>
+<li>translatte
+<ul>
+<li>ref. <a href="https://github.com/extensionsapp/translatte">https://github.com/extensionsapp/translatte</a></li>
+</ul>
+</li>
+<li>Google Translate API
+<ul>
+<li>ref. <a href="https://www.section.io/engineering-education/working-with-translate-api-in-nodejs/">https://www.section.io/engineering-education/working-with-translate-api-in-nodejs/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/ganyunhee/" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+    <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+</body>
+</html>
