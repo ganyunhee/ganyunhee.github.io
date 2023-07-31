@@ -6,7 +6,19 @@
     <description>Recent content in diary on CODENAME | EUNS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 11</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day11/</link>
+      <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day11/</guid>
+      <description>서론 JavaScript: 추가 학습 AJAX - 비동기 프로그래밍 (프론트엔드, 백엔드 &amp;ndash; 공통사항) 요즘 회사 : Angular, jquery Vercel - GitHub 통째로 올리고 배포 가능
+기초 때는 Vanilla로 하는 것 좋음 처음에 너무 high-level(trend)만 배우면 안 좋다 (쓰기 편해서 사용하는 기술들임)
+면접 볼 때 단어 (프론트엔드 해봤다) 얘기하지 말고 이런 것을 만들었다/이런 문제를 해결했다 &amp;ldquo;어린애처럼 얘기하기&amp;rdquo; e.g. 프로젝트 만드는데 CRUD 사용했고, React를 사용해서 app을 만들었다, etc.
+주제. Python 파이썬 설치, 라이브러리 설치 개요 문법 (변수, 자료, 연산자 등) Numpy, Pandas, Matplotlib Flask를 통해 DB 연결 맛보기 Linux에서 Python이 기본으로 설치되어 있음</description>
+    </item>
+    
     <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 10</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day10/</link>

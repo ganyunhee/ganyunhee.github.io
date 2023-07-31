@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 11 - CODENAME | EUNS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://ganyunhee.github.iofavicon.png">
+  <link rel="canonical" href="http://ganyunhee.github.io/posts/aiweb_day11/" />
+    
+    
+    <link rel="stylesheet" href="/css/style.min.53cc28b9418ccfd52aef5b777355aebd3453c9c49e384d73246546bea383f822.css">
+    <link rel="stylesheet" href="/assets/css/extended.min.9729f28a5087b689b946e103d96abd63bfd37b1417effa251dbf798312e3fba5.css">
+
+  
+    
+    <meta property="og:title" content="[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 11"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ganyunhee.github.io/posts/aiweb_day11/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    
+    
+  
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira&#43;Mono&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+
+  
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-home">
+                    <a href="http://ganyunhee.github.io/">Home</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-blog">
+                    <a href="http://ganyunhee.github.io/posts/">Blog</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-about">
+                    <a href="http://ganyunhee.github.io/pages/about/">About</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-tags">
+                    <a href="http://ganyunhee.github.io/tags/">Tags</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="/">CODENAME | EUNS</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      
+      
+      <li class="menu-item-home ">
+        <a href="/">
+          
+          <span>Home</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog ">
+        <a href="/posts/">
+          
+          <span>Blog</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-about ">
+        <a href="/pages/about/">
+          
+          <span>About</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-tags ">
+        <a href="/tags/">
+          
+          <span>Tags</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 11<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <h2 id="서론">서론</h2>
+<hr>
+<h3 id="javascript-추가-학습">JavaScript: 추가 학습</h3>
+<ul>
+<li>AJAX - 비동기 프로그래밍 (프론트엔드, 백엔드 &ndash; 공통사항)</li>
+</ul>
+<p>요즘 회사 : Angular, jquery
+Vercel - GitHub 통째로 올리고 배포 가능</p>
+<p>기초 때는 Vanilla로 하는 것 좋음
+처음에 너무 high-level(trend)만 배우면 안 좋다
+(쓰기 편해서 사용하는 기술들임)</p>
+<p>면접 볼 때 단어 (프론트엔드 해봤다) 얘기하지 말고
+이런 것을 만들었다/이런 문제를 해결했다
+&ldquo;어린애처럼 얘기하기&rdquo;
+e.g. 프로젝트 만드는데 CRUD 사용했고, React를 사용해서 app을 만들었다, etc.</p>
+<hr>
+<h2 id="주제-python">주제. Python</h2>
+<ul>
+<li>파이썬 설치, 라이브러리 설치</li>
+<li>개요</li>
+<li>문법 (변수, 자료, 연산자 등)</li>
+<li>Numpy, Pandas, Matplotlib
+<ul>
+<li>Flask를 통해 DB 연결 맛보기</li>
+</ul>
+</li>
+</ul>
+<p>Linux에서 Python이 기본으로 설치되어 있음</p>
+<p>Python 3.6 이상 설치 (latest as of 0731: 3.11)</p>
+<h3 id="python-설치-확인">Python 설치 확인</h3>
+<p><img src="/posts/posts_images/aiweb_day11/python.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install numpy pandas matplotlib jupyter
+</span></span></code></pre></div><p>numpy</p>
+<p><img src="/posts/posts_images/aiweb_day11/numpy.png" alt=""></p>
+<p>pandas</p>
+<p><img src="/posts/posts_images/aiweb_day11/pandas.png" alt=""></p>
+<p>matplotlib</p>
+<p><img src="/posts/posts_images/aiweb_day11/matplotlib.png" alt=""></p>
+<p>jupyter</p>
+<p><img src="/posts/posts_images/aiweb_day11/jupyter.png" alt=""></p>
+<h2 id="python-개요">Python 개요</h2>
+<ul>
+<li>
+<p>Standard Module (표준 모듈)</p>
+<ul>
+<li>Numpy : 수학/통계, 데이터 기반 (표준편차, median, etc.)</li>
+<li>Pandas : 테이블 데이터 (Dataframe) 다루도록 하는 라이브러리 (SQL, DB)</li>
+<li>Matplotlib : 데이터 시각화 (e.g. 차트, etc.)</li>
+<li>Jupyter : 실습 &ndash; 파이썬의 유용한 툴, 웹서버가 실행해서 안에서 코드 작성 할 수 있도록 (데이터 분석, 수학자/과학자 사용)
+<ul>
+<li>머신러닝 서버를 Jupyter로 만들 수 있음 (inference 가능)</li>
+</ul>
+</li>
+<li>Tensorflow : 딥러닝, neural network 알고리즘 가장 쉽게 이해하고 구현할 수 있는 라이브러리
+<ul>
+<li>인공지능이 대세 : 99% Python, 1% C (CUDA/GPU 프로그래밍)</li>
+</ul>
+</li>
+<li>Math : 수학적 계산을 돕는 함수들을 포함한 라이브러리</li>
+</ul>
+</li>
+<li>
+<p>활용분야: 웹 개발, 데이터 분석, 기계 학습, 인공 지능 등</p>
+</li>
+</ul>
+<h3 id="jupyter-활용">Jupyter 활용</h3>
+<p>VS Code에서 Shift+Enter  &gt; Python 환경 &gt; 설치된 파이썬 버전 선택</p>
+<h3 id="python-기초">Python 기초</h3>
+<ol>
+<li>변수와 데이터 타입</li>
+<li>연산자와 표현식</li>
+<li>문장과 제어 흐름</li>
+<li>함수와 모듈</li>
+<li>데이터 구조와 컬렉션</li>
+<li>OOP (객체지향 프로그래밍)</li>
+<li>Numpy 초급</li>
+<li>Pandas 초급</li>
+<li>Matplotlib 초</li>
+<li>Flask</li>
+</ol>
+<p>파이썬을 스스로 학습하 적이 있어서 이 중에 제가 어려워하는 부분을 중심으로 학습하겠습니다. 하나하나씩 주피터 코드 내용을 훌터봐서 정리하자면 &hellip;</p>
+<ul>
+<li>데이터 구조와 컬렉션에서 &lsquo;List&rsquo;, &lsquo;Tuple&rsquo;, &lsquo;Set&rsquo;, &lsquo;Dictionary&rsquo;</li>
+<li>OOP에서 클래스와 객체, 상속 (부모 클래스, 자식 클래스)</li>
+<li>Numpy, Pandas, Matplotlib, Flask
+(5번부터 10까지)</li>
+</ul>
+<h2 id="module-가져오기">Module 가져오기</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">[</span><span class="n">library_name</span><span class="p">]</span> <span class="k">as</span> <span class="p">[</span><span class="n">alias</span><span class="p">]</span>
+</span></span></code></pre></div><p>모듈명을 파이썬 파일의 이름을 기준으로 사용한다.</p>
+<p>e.g. <code>my_module.py</code> 파일이 있으면</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&#34;님, 안녕하세요!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_fullname</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">full_name</span> <span class="o">=</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span> <span class="o">+</span> <span class="n">first_name</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">full_name</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">sum</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">sum</span>
+</span></span></code></pre></div><p><code>import my_module</code>로 가져올 수 있습니다. 또는 <code>from my_module import say_hello</code> 모듈 파일 안에 있는 함수 또는 모듈의 일부 코드를 가져올 수 있습니다.</p>
+<h4 id="test">TEST</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">say_hello</span><span class="p">,</span> <span class="n">get_fullname</span><span class="p">,</span> <span class="n">add_numbers</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">your_module</span> <span class="kn">import</span> <span class="n">get_fullname</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">full_name</span> <span class="o">=</span> <span class="n">get_fullname</span><span class="p">(</span><span class="s2">&#34;David&#34;</span><span class="p">,</span> <span class="s2">&#34;Paul&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Your full-name is </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">full_name</span><span class="p">))</span>
+</span></span></code></pre></div><p>이슈. 똑같은 함수 하나(<code>get_fullname</code>)가 두 가지 모듈 안에서 정의되어 있는데
+실행해도 출력이 안되는 상황이 발생되었다.</p>
+<p>설명.</p>
+<ul>
+<li>Jupyter는 Web UI처럼 실행됨.</li>
+<li>your_module이라는 파일은 미리 만들었으니까 있는 것을 알고 있음.</li>
+<li>단, 실행할 당시에 your_module 안에 있는 함수가 인식이 안 됨.</li>
+<li>해결 방식 : 재시작/재실행</li>
+</ul>
+<p>NOTE. 인공지능과 Jupyter
+인공지능은 프로그래밍이 아닌 실험이다.
+코드는 수단일 뿐. 인공지능에서 jupyter를 많이 사용한다.</p>
+<h2 id="lists">Lists</h2>
+<ul>
+<li>리스트는 순서가 있는 변경 가능한 요소의 집합입니다.</li>
+</ul>
+<p>List Traversal</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;사과&#34;</span><span class="p">,</span> <span class="s2">&#34;바나나&#34;</span><span class="p">,</span> <span class="s2">&#34;체리&#34;</span><span class="p">,</span> <span class="s2">&#34;파인애플&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># first element in list</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;첫 번째 과일:&#34;</span><span class="p">,</span> <span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># last element in list</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;마지막 과일:&#34;</span><span class="p">,</span> <span class="n">fruits</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 첫 번째 과일: 바나나</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 마지막 과일: 파인애플</span>
+</span></span></code></pre></div><p>List에 원소 추가 및 삭제 - append, remove</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 원소 추가</span>
+</span></span><span class="line"><span class="cl"><span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;포도&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;갱신된 과일:&#34;</span><span class="p">,</span> <span class="n">fruits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신된 과일: [&#39;사과&#39;, &#39;오렌지&#39;, &#39;체리&#39;, &#39;파인애플&#39;, &#39;포도&#39;]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 원소 삭제</span>
+</span></span><span class="line"><span class="cl"><span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;체리&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;갱신된 과일:&#34;</span><span class="p">,</span> <span class="n">fruits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신된 과일: [&#39;사과&#39;, &#39;오렌지&#39;, &#39;파인애플&#39;, &#39;포도&#39;]</span>
+</span></span></code></pre></div><p>List 원소 변경</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;오렌지&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;변경된 과일:&#34;</span><span class="p">,</span> <span class="n">fruits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신된 과일: [&#39;사과&#39;, &#39;오렌지&#39;, &#39;파인애플&#39;, &#39;포도&#39;]</span>
+</span></span></code></pre></div><h2 id="tuples">Tuples</h2>
+<ul>
+<li>튜플은 순서가 있는 변경할 수 없는 요소의 집합입니다.</li>
+<li>메모리 사용량이 적다</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">person</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;뉴욕&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;사람:&#34;</span><span class="p">,</span> <span class="n">person</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 사람: (&#39;Alice&#39;, 25, &#39;뉴욕&#39;)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;이름:&#34;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;나이:&#34;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 이름: Alice</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 나이: 25</span>
+</span></span></code></pre></div><p>Tuple Casting</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="sets">Sets</h2>
+<ul>
+<li>세트는 ==순서가 없는== 고유한 요소의 집합입니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;숫자:&#34;</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+</span></span></code></pre></div><p>Set 원소 추가 - add</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;갱신된 숫자:&#34;</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신된 숫자: {1, 2, 3, 4, 5}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span></code></pre></div><p>ERROR.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">TypeError                                                           Traceback (most recent call last) [~\AppData\Local\Temp/ipykernel_57072/4266639200.py](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Eunice/OneDrive%20-%20Sogang/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/AI_%EC%9B%B9%EA%B0%9C%EB%B0%9C_NIPA/Seoul-ICT-Web-Base/python/~/AppData/Local/Temp/ipykernel_57072/4266639200.py) in () 
+</span></span><span class="line"><span class="cl">----&gt; 1 numbers[0] 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TypeError: &#39;set&#39; object is not subscriptable
+</span></span></code></pre></div><p>&ldquo;not subscriptable&rdquo; == 셀 수 없다</p>
+<h2 id="dictionary">Dictionary</h2>
+<ul>
+<li>딕셔너리는 키-값 쌍(key-value pair)의 순서가 없는 집합입니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;이름:&#34;</span><span class="p">,</span> <span class="n">student</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">])</span>
+</span></span></code></pre></div><p>ket를 날리는 방법</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">del</span> <span class="n">student</span><span class="p">[</span><span class="s2">&#34;age&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;갱신된 학생:&#34;</span><span class="p">,</span> <span class="n">student</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신된 학생: {&#39;name&#39;: &#39;Alice&#39;, &#39;major&#39;: &#39;수학&#39;}</span>
+</span></span></code></pre></div><h2 id="oop">OOP</h2>
+<p>클래스와 객체 : 생성자(constructor), 메서드(method/함수)</p>
+<ul>
+<li>class 이름 &ndash; 대문자로 시작 (e.g. Rectangle)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 클래스와 객체</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 클래스는 객체를 생성하기 위한 청사진(blueprint)이며, 객체는 클래스의 인스턴스입니다.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 클래스 정의하기</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">#생성자(constructor)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 메서드(method, 함수)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Object creation</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># instance</span>
+</span></span><span class="line"><span class="cl"><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rect2 = Rectangle(4, 6)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Accessing object attributes and methods</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rectangle1 width: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">width</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rectangle1 height: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rectangle 1 area:&#34;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">area</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#print(&#34;Rectangle 2 area:&#34;, rect2.area())</span>
+</span></span></code></pre></div><p>생성자 - 객체/instance를 (생성하고) 초기화하는 메서드</p>
+<p>메서드 - 클래스 안에 선언된 함수</p>
+<h4 id="class-vs-instance-vs-constructor">Class vs. Instance vs. Constructor</h4>
+<ul>
+<li>Class
+<ul>
+<li>describes structure of instance (e.g. behavior, information)</li>
+</ul>
+</li>
+<li>Instance
+<ul>
+<li>object created from class</li>
+<li>메모리 공간을 차지하는 객체</li>
+</ul>
+</li>
+<li>Constructor
+<ul>
+<li>method in a class used to create and initialize  an object of a class</li>
+</ul>
+</li>
+</ul>
+<p>객체지향 언어에서 많이 언급하는 개념</p>
+<ul>
+<li>Constructor Overloading</li>
+<li>Constructor Overriding</li>
+</ul>
+<p>Constructor 선언</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="kc">None</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">...</span>
+</span></span></code></pre></div><p>특징 포인트 : 앞과 뒤 언더바 2개씩, init, argument로 self
+self : 자기 자신을 포인트/참고 한다</p>
+<br>
+<p>학교에서 Java를 공부했을 때 Class, Instance, Constructor 등의 개념을 배웠지만&hellip;
+아직도 이해하기가 어렵네요&hellip; 따로 유데미 강의를 통해서 또는 스스로 인터넷 검색을 통해서 더욱 깊이 실펴볼 필요가 있다. 개념 파악하고 파이썬에서 사용하는 방식을 배워서 숙지할 것!</p>
+<p>NEXT. 상속
+<br><br></p>
+<h1 id="python-library-정리-">Python Library 정리 ~~</h1>
+<hr>
+<br>
+## Numpy
+docs. https://numpy.org/doc/stable/reference/
+<ul>
+<li>배열
+<ul>
+<li>배열 요소 접근 - <code>arr[i]</code>, <code>arr[i, j]</code></li>
+<li>배열 생성 - <code>np.array</code></li>
+<li>배열 속성 - <code>np.shape</code>, <code>np.dtype</code></li>
+<li>배열 함수 - <code>np.sum</code>, <code>np.mean</code>, <code>np.max</code>, <code>np.min</code></li>
+<li>배열 재구성 - <code>np.reshape</code></li>
+<li>배열 슬라이싱 - <code>arr[n:m]</code></li>
+<li>배열 연결 - <code>np.concatenate</code></li>
+<li>배열 스택 - <code>np.stack</code></li>
+<li>난수 생성 - <code>np.random.rand(row, col)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="pandas">Pandas</h2>
+<p>docs. <a href="https://pandas.pydata.org/docs/reference/index.html">https://pandas.pydata.org/docs/reference/index.html</a></p>
+<ul>
+<li>DataFrame 생성</li>
+<li>데이터 접근</li>
+<li>요약 통계량</li>
+<li>데이터 필터링</li>
+<li>열 추가 및 삭제</li>
+<li>CSV 파일로부터 읽기</li>
+</ul>
+<h2 id="matplotlib">Matplotlib</h2>
+<p>docs. <a href="https://matplotlib.org/stable/api/index.html">https://matplotlib.org/stable/api/index.html</a></p>
+<p>Matplotlib 가져오기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import matplolib.pyplot as plt
+</span></span></code></pre></div><ul>
+<li>산점도(Scatter Plot) - <code>plt.scatter(x, y)</code></li>
+<li>막대 그래(Bar Graph) - <code>plt.bar(x, y)</code></li>
+<li>히스토그램(Histogram) - <code>plt.hist(data)</code></li>
+<li>파이 차트(pie chart) - <code>plt.pie(...)</code></li>
+</ul>
+<h2 id="flask">Flask</h2>
+<p>docs. <a href="https://flask.palletsprojects.com/en/2.3.x/">https://flask.palletsprojects.com/en/2.3.x/</a></p>
+<p>Flask는 파이썬 기반의 프레임워크인데 SQL 데이터베이스를 쉽게 만들고 관리할 수 있는 기능을 제공하고 있는 프레임워크입니다.</p>
+<br>
+<hr>
+<br>
+<h1 id="과제-">과제 &gt;</h1>
+<p><br><br><br><br></p>
+<h4 id="heading">——————————————————————————</h4>
+<p>본 후기는 정보통신산업진흥원(NIPA)에서 주관하는 &lt;AI 서비스 완성! AI+웹개발 취업캠프 - 프론트엔드&amp;백엔드&gt; 과정 학습/프로젝트/과제 기록으로 작성 되었습니다.
+#정보통신산업진흥원 #NIPA #AI교육 #프로젝트 #유데미 #IT개발캠프 #개발자부트캠프 #프론트엔드 #백엔드 #AI웹개발취업캠프 #취업캠프 #개발취업캠프</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/ganyunhee/" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+    <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+</body>
+</html>
