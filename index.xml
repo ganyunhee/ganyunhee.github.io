@@ -13,7 +13,7 @@
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>http://ganyunhee.github.io/posts/aiweb_day14/</guid>
-      <description>## DB 만들다가 나온 문제들 --- 데이터베이스를 어떻게 구성해야 데이터를 완벽하게 관리할 수 있을지 방법을 몰랐다. 각 entity의 기본값을 어떻게 설정하는지 많이 고민했다. HeidiSQL이나 DBeaver의 기능 숙지할 필요가 있었다. 테이블 간 관계 모델링, 또는 Primary Key, Foreign Key 설정 등 잘하는 방법을 모른다. DB 만들 때 강사님의 조언 Foreign Key를 알아야 데이터베이스 생각하면서 코딩할 수 있다. 단, 실무에서 DB 수정할 것이 많을 수 있으니 Foreign Key를 잘 사용하지 않을 수 있다.</description>
+      <description>DB 만들다가 나온 문제들 데이터베이스를 어떻게 구성해야 데이터를 완벽하게 관리할 수 있을지 방법을 몰랐다. 각 entity의 기본값을 어떻게 설정하는지 많이 고민했다. HeidiSQL이나 DBeaver의 기능 숙지할 필요가 있었다. 테이블 간 관계 모델링, 또는 Primary Key, Foreign Key 설정 등 잘하는 방법을 모른다. DB 만들 때 강사님의 조언 Foreign Key를 알아야 데이터베이스 생각하면서 코딩할 수 있다. 단, 실무에서 DB 수정할 것이 많을 수 있으니 Foreign Key를 잘 사용하지 않을 수 있다.</description>
     </item>
     
     <item>
