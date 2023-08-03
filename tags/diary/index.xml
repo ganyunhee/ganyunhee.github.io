@@ -6,7 +6,37 @@
     <description>Recent content in diary on CODENAME | EUNS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 14</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day14/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day14/</guid>
+      <description>## DB 만들다가 나온 문제들 --- 데이터베이스를 어떻게 구성해야 데이터를 완벽하게 관리할 수 있을지 방법을 몰랐다. 각 entity의 기본값을 어떻게 설정하는지 많이 고민했다. HeidiSQL이나 DBeaver의 기능 숙지할 필요가 있었다. 테이블 간 관계 모델링, 또는 Primary Key, Foreign Key 설정 등 잘하는 방법을 모른다. DB 만들 때 강사님의 조언 Foreign Key를 알아야 데이터베이스 생각하면서 코딩할 수 있다. 단, 실무에서 DB 수정할 것이 많을 수 있으니 Foreign Key를 잘 사용하지 않을 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 13</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day13/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day13/</guid>
+      <description>Today&amp;rsquo;s Insight 회사에서 Framework를 많이 사용한다. 단, IT트렌드는 시대마다 바뀐다. 지금 어떤 트렌드를 배워도 어차피 몇 년이 지나면 배운 가치가 없어지는데 어떻게 한면 좋을까? 개발자로서 가지고 있어야 할 스킬은 뭔가 새로 나오면 내가 배울 수 있어야 한다.
+&amp;ldquo;OS, 알고리즘&amp;hellip;이거 언제 다 배우냐?&amp;quot;
+CS 개념 많이 알고 있으면 좋지만, 이 개념들 다 빨리 배우는 것이 중요하지 않고 회사에 들어가서 일을 할 수 있는 능력이 더 중요하다.
+어떤 기술이 필요할 때 시간 비용을 생각해서 사용하는 방식을 생각해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 12</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day12/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day12/</guid>
+      <description>Python - 외부 라이브러리 사용 외부 라이브러리 (e.g. numpy, scipy, jupyter 등)을 사용하기 위해 라이브러리를 먼저 설치해야 한다. 라이브러리를 설치하려면 패키지 매니저 (e.g. pip, npm 등)을 사용해야 한다. __init.py__ 에 대해 파이썬 패키지의 파일 구조를 보면 생성자(constructor) 코드가 들어간 __init__.py 라는 파일이 이미 만들어짐. usr &amp;gt; local &amp;gt; lib &amp;gt; python3.11 &amp;gt; site-packages &amp;gt; numpy &amp;gt; __init__.py 라이브러리를 설치할 때 같이 다운받게 되는 생성자 파일이다. numpy arr = np.array([1,2,3]) arr # result : array([1, 2, 3]) 메소드 같은데 객체이다.</description>
+    </item>
+    
     <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 11</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day11/</link>
