@@ -6,7 +6,22 @@
     <description>Recent content in Slowly getting somewhere on CODENAME | EUNS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Udemy - Python</title>
+      <link>http://ganyunhee.github.io/posts/udemy_req_python/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/udemy_req_python/</guid>
+      <description>CONTENTS SUMMARY Heading 1
+Heading 2
+Heading 3
+서론 Udemy 필수 강의 : 코딩 초보자를 위한 파이썬(Python) 입문(Beginner)
+3주차부터 유데미 강의를 필수로 수강하기 시작했습니다.
+이미 파이썬을 어느 정도 사용했기 때문에 기초 내용보다는 자료구조 학습과 유데미 강사님의 코딩 방식에 더 집중하여 학습했습니다.
+리스트, 튜플, 세트 List Set 합집합 if, elif, else 해결하고자 하는 문제에 따라 조건이 많을 수 있는데 이런 경우에는 nested if문이나 하나의 if문과 함께 많은 elif문을 퉁해 다양한 조건을 정의할 수 있는 것을 배웠습니다.</description>
+    </item>
+    
     <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 14</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day14/</link>
