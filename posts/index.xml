@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 16</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day16/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day16/</guid>
+      <description>CONTENTS SUMMARY 학습 목표 REVIEW 실습 &amp;gt; Node JS를 통해 간단한 서버 만들기 과제 &amp;gt; addHTML.js 실행, clock.html 커스터마이징 학습 목표 React를 학습하기 전에 Node JS를 통해 프로그램레 기능을 추가하기 위한 모듈을 내보내고 가져오기 학습 및 실습한다.
+REVIEW 시작하기 전에 JavaScript의 가지 개념을 먼저 다시 살펴봤습니다. 객체와 배열에 대한 개념부터 시작하였고, map과 filter 함수의 차이 등을 복습했습니다. 그 다음 더 객체 리터럴, 구조 분해 할당, JSON(JavaScript Object Notation) 포맷 등 Node JS를 사용하기 위한 필수적인 개념에 대한 학습을 했습니다.</description>
+    </item>
+    
+    <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Udemy - Python</title>
       <link>http://ganyunhee.github.io/posts/udemy_req_python/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
