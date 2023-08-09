@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 17 - CODENAME | EUNS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://ganyunhee.github.iofavicon.png">
+  <link rel="canonical" href="http://ganyunhee.github.io/posts/aiweb_day17/" />
+    
+    
+    <link rel="stylesheet" href="/css/style.min.d96956baa64316609a43cc0c7a89dda14f5cf73cc7703ef113a45a8eb5ba548c.css">
+    <link rel="stylesheet" href="/assets/css/extended.min.9729f28a5087b689b946e103d96abd63bfd37b1417effa251dbf798312e3fba5.css">
+
+  
+    
+    <meta property="og:title" content="[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 17"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ganyunhee.github.io/posts/aiweb_day17/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    
+    
+  
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira&#43;Mono&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+
+  
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-home">
+                    <a href="http://ganyunhee.github.io/">Home</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-blog">
+                    <a href="http://ganyunhee.github.io/posts/">Blog</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-about">
+                    <a href="http://ganyunhee.github.io/pages/about/">About</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-tags">
+                    <a href="http://ganyunhee.github.io/tags/">Tags</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="/">CODENAME | EUNS</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      
+      
+      <li class="menu-item-home ">
+        <a href="/">
+          
+          <span>Home</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog ">
+        <a href="/posts/">
+          
+          <span>Blog</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-about ">
+        <a href="/pages/about/">
+          
+          <span>About</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-tags ">
+        <a href="/tags/">
+          
+          <span>Tags</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 17<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <h1 id="contents-summary">CONTENTS SUMMARY</h1>
+<hr>
+<br>
+<ul>
+<li><a href="#%ED%95%99%EC%8A%B5-%EB%AA%A9%ED%91%9C">학습 목표</a></li>
+<li><a href="#week-4-1%ED%9A%8C%EC%B0%A8-continuation">Week 4: 1회차 CONTINUATION</a></li>
+<li><a href="#week-4-2%ED%9A%8C%EC%B0%A8-start">Week 4: 2회차 START</a></li>
+<li><a href="#%EA%B3%BC%EC%A0%9C--lotto-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%BE%B8%EB%AF%B8%EA%B8%B0">과제 &gt; lotto 프로그램 꾸미기</a></li>
+<li><a href="#output">OUTPUT</a></li>
+</ul>
+<p><br><br><br></p>
+<h2 id="학습-목표">학습 목표</h2>
+<hr>
+<br>
+<ul>
+<li>NodeJS와 JavaScript 코딩 마무리한다.</li>
+<li>React Application을 만드는 과정을 배운다.</li>
+<li>JavaScript에서 만들었던 코드를 React와 JSX로 만드는 실습을 한다.</li>
+</ul>
+<p><br><br><br></p>
+<h2 id="week-4-1회차-continuation">Week 4: 1회차 CONTINUATION</h2>
+<p>저번에는 addMorgan.js와 Node JS module에 대해서 배웠습니다.</p>
+<p>이번에는 addURL.js를 통해 url을 연결시키는 방법을 배웠습니다.</p>
+<p>RECALL
+노드 기반의 JS Project</p>
+<ul>
+<li>서버 만들기 &ndash; 데이터를 제공하는 컴퓨터 또는 프로그램
+서버를 통해 문서를 제공할 때 주의할 점 &ndash; 서버가 문서들을 읽어서 적용</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">const url = require(&#39;url&#39;);
+</span></span></code></pre></div><br>
+<p>서버는 문서의 주소를 해석해서 문서를 제공합니다. 문서의 주소는 url로 나타냅니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var morgan = require(&#39;morgan&#39;)
+</span></span><span class="line"><span class="cl">var logger = morgan(&#39;tiny&#39;)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">const server = http.createServer(function (req, res) {
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  const pageURL = req.url;
+</span></span><span class="line"><span class="cl">  const pathname = url.parse(pageURL, true).pathname;
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><br>
+<p><code>req.url</code> : 요청 주소를 읽고
+<code>parse</code> : url을 해석 &ndash; 거기 붙어 있는 경로(path)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">node addUrl.js
+</span></span></code></pre></div><br>
+<p>HTML 요소를 선책하는 방법</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">getElementById(id)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">querySelector(css_selector)
+</span></span></code></pre></div><br>
+<p>addUrl.js 파악해보기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">res.end(data);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//vs.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">res.write(data);
+</span></span><span class="line"><span class="cl">res.end()
+</span></span></code></pre></div><br>
+<h3 id="end와-write의-차이">end와 write의 차이</h3>
+<ul>
+<li><code>end</code> &ndash; 데이터를 전달하고 종료한다 <br></li>
+<li><code>write</code> &ndash; 데이터 전송만 한다</li>
+</ul>
+<p><br><br><br></p>
+<h2 id="week-4-2회차-start">Week 4: 2회차 START</h2>
+<hr>
+<br>
+<p>2회차부터 React 학습을 시작했습니다. React를 통해 애플리케이션을 만드는 방법은 다음과 같습니다.</p>
+<br>
+<h3 id="react의-기본형-프로젝트-만들기">React의 기본형 프로젝트 만들기</h3>
+<p>React 프로젝트의 템플릿 또는 기본형태를 만들어주는 명령어는 <code>npx create-react-app</code>입니다.
+개발을 바로 시작할 수 있게끔 어떤 형태를 잡아주는 도구들을 갖다가 일반적으로 boiler plate(데워진 접)라고 부릅니다.</p>
+<p>아래 명령어와 같이 <code>my-app</code>이라는 React 애플리케이션을 만들겠습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npx create-react-app my-app
+</span></span></code></pre></div><br>
+<p>위 명령어를 실행한 후 콘솔에서 아래 나용처럼 텍스트가 나타납니다.
+<br></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Eunice</span><span class="err">\</span><span class="nx">OneDrive</span> <span class="o">-</span> <span class="nx">Sogang</span><span class="err">\바탕</span> <span class="err">화면\</span><span class="nx">git</span><span class="err">\</span><span class="nx">ai_webdev</span><span class="err">\</span><span class="nx">react</span><span class="err">\</span><span class="mi">0808</span><span class="p">&gt;</span><span class="nx">npx</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span> <span class="nx">my</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Need</span> <span class="nx">to</span> <span class="nx">install</span> <span class="nx">the</span> <span class="nx">following</span> <span class="nx">packages</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span><span class="err">@</span><span class="mf">5.0.1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Ok</span> <span class="nx">to</span> <span class="nx">proceed</span><span class="err">?</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="nx">y</span>
+</span></span><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">WARN</span> <span class="nx">deprecated</span> <span class="nx">tar</span><span class="err">@</span><span class="mf">2.2.2</span><span class="p">:</span> <span class="nx">This</span> <span class="nx">version</span> <span class="nx">of</span> <span class="nx">tar</span> <span class="nx">is</span> <span class="nx">no</span> <span class="nx">longer</span> <span class="nx">supported</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">will</span> <span class="nx">not</span> <span class="nx">receive</span> <span class="nx">security</span> <span class="nx">updates</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">upgrade</span> <span class="nx">asap</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Creating</span> <span class="nx">a</span> <span class="nx">new</span> <span class="nx">React</span> <span class="nx">app</span> <span class="nx">in</span> <span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Eunice</span><span class="err">\</span><span class="nx">OneDrive</span> <span class="o">-</span> <span class="nx">Sogang</span><span class="err">\바탕</span> <span class="err">화면\</span><span class="nx">git</span><span class="err">\</span><span class="nx">ai_webdev</span><span class="err">\</span><span class="nx">react</span><span class="err">\</span><span class="mi">0808</span><span class="err">\</span><span class="nx">my</span><span class="o">-</span><span class="nx">app</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Installing</span> <span class="nx">packages</span><span class="p">.</span> <span class="nx">This</span> <span class="nx">might</span> <span class="nx">take</span> <span class="nx">a</span> <span class="nx">couple</span> <span class="nx">of</span> <span class="nx">minutes</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Installing</span> <span class="nx">react</span><span class="p">,</span> <span class="nx">react</span><span class="o">-</span><span class="nx">dom</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">react</span><span class="o">-</span><span class="nx">scripts</span> <span class="nx">with</span> <span class="nx">cra</span><span class="o">-</span><span class="nx">template</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">added</span> <span class="mi">1426</span> <span class="nx">packages</span> <span class="nx">in</span> <span class="mi">1</span><span class="nx">m</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">231</span> <span class="nx">packages</span> <span class="nx">are</span> <span class="nx">looking</span> <span class="k">for</span> <span class="nx">funding</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">run</span> <span class="s">`npm fund`</span> <span class="k">for</span> <span class="nx">details</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Installing</span> <span class="nx">template</span> <span class="nx">dependencies</span> <span class="nx">using</span> <span class="nx">npm</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">added</span> <span class="mi">74</span> <span class="nx">packages</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">changed</span> <span class="mi">1</span> <span class="kn">package</span> <span class="nx">in</span> <span class="mi">7</span><span class="nx">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">240</span> <span class="nx">packages</span> <span class="nx">are</span> <span class="nx">looking</span> <span class="k">for</span> <span class="nx">funding</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">run</span> <span class="s">`npm fund`</span> <span class="k">for</span> <span class="nx">details</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Removing</span> <span class="nx">template</span> <span class="kn">package</span> <span class="nx">using</span> <span class="nx">npm</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">removed</span> <span class="mi">1</span> <span class="kn">package</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">audited</span> <span class="mi">1500</span> <span class="nx">packages</span> <span class="nx">in</span> <span class="mi">2</span><span class="nx">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">240</span> <span class="nx">packages</span> <span class="nx">are</span> <span class="nx">looking</span> <span class="k">for</span> <span class="nx">funding</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">run</span> <span class="s">`npm fund`</span> <span class="k">for</span> <span class="nx">details</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">6</span> <span class="nx">high</span> <span class="nx">severity</span> <span class="nx">vulnerabilities</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">To</span> <span class="nx">address</span> <span class="nx">all</span> <span class="nf">issues</span> <span class="p">(</span><span class="nx">including</span> <span class="nx">breaking</span> <span class="nx">changes</span><span class="p">),</span> <span class="nx">run</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">audit</span> <span class="nx">fix</span> <span class="o">--</span><span class="nx">force</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Run</span> <span class="s">`npm audit`</span> <span class="k">for</span> <span class="nx">details</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Success</span><span class="p">!</span> <span class="nx">Created</span> <span class="nx">my</span><span class="o">-</span><span class="nx">app</span> <span class="nx">at</span> <span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Eunice</span><span class="err">\</span><span class="nx">OneDrive</span> <span class="o">-</span> <span class="nx">Sogang</span><span class="err">\바탕</span> <span class="err">화면\</span><span class="nx">git</span><span class="err">\</span><span class="nx">ai_webdev</span><span class="err">\</span><span class="nx">react</span><span class="err">\</span><span class="mi">0808</span><span class="err">\</span><span class="nx">my</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Inside</span> <span class="nx">that</span> <span class="nx">directory</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">can</span> <span class="nx">run</span> <span class="nx">several</span> <span class="nx">commands</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">start</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Starts</span> <span class="nx">the</span> <span class="nx">development</span> <span class="nx">server</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">run</span> <span class="nx">build</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Bundles</span> <span class="nx">the</span> <span class="nx">app</span> <span class="nx">into</span> <span class="nx">static</span> <span class="nx">files</span> <span class="k">for</span> <span class="nx">production</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">test</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Starts</span> <span class="nx">the</span> <span class="nx">test</span> <span class="nx">runner</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">run</span> <span class="nx">eject</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Removes</span> <span class="nx">this</span> <span class="nx">tool</span> <span class="nx">and</span> <span class="nx">copies</span> <span class="nx">build</span> <span class="nx">dependencies</span><span class="p">,</span> <span class="nx">configuration</span> <span class="nx">files</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">and</span> <span class="nx">scripts</span> <span class="nx">into</span> <span class="nx">the</span> <span class="nx">app</span> <span class="nx">directory</span><span class="p">.</span> <span class="nx">If</span> <span class="nx">you</span> <span class="nx">do</span> <span class="nx">this</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">can</span><span class="err">’</span><span class="nx">t</span> <span class="k">go</span> <span class="nx">back</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">We</span> <span class="nx">suggest</span> <span class="nx">that</span> <span class="nx">you</span> <span class="nx">begin</span> <span class="nx">by</span> <span class="nx">typing</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">cd</span> <span class="nx">my</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">start</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Happy</span> <span class="nx">hacking</span><span class="p">!</span>
+</span></span></code></pre></div><p><code>Happy Hacking!</code>이라는 문장이 나타나고 my-app 폴더가 생성되면 가본형 React 애플리케이션이 이제 만들어진 상태입니다.</p>
+<p>VS Code에서 폴더는 다음 사진처럼 나타납니다.<br>
+<img src="/posts/posts_images/aiweb_day17/45b1a90fef8dbaef82fe563f19570497.png" alt=""></p>
+<p>RECALL. <code>package.json</code> &ndash; Node JS의 관리 파일</p>
+<p><code>src</code> 폴더 안에서 작업</p>
+<p>react 에플리케이션 폴더 안에서 들어가기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd my-app
+</span></span></code></pre></div><p><code>package.json</code> 관리 파일의 내용을 보면 <code>start</code>, <code>build</code> 등 기본 명령어가 설정되어 있는 것을 확인할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  &#34;scripts&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;start&#34;: &#34;react-scripts start&#34;,
+</span></span><span class="line"><span class="cl">    &#34;build&#34;: &#34;react-scripts build&#34;,
+</span></span><span class="line"><span class="cl">    &#34;test&#34;: &#34;react-scripts test&#34;,
+</span></span><span class="line"><span class="cl">    &#34;eject&#34;: &#34;react-scripts eject&#34;
+</span></span><span class="line"><span class="cl">  },
+</span></span></code></pre></div><p><code>start</code> 명령어를 통해 어플리케이션을 시작합니다.</p>
+<p>react 애플리케이션 실행 명령어 <code>npm start</code></p>
+<p>JSON 파일에 있는 script들은 npm 기반으로 돌아가게 되니 다음 명령얼어를 실행하여 react app을 시작합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm-start
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day17/cc741e7894808221ce1b0968a9e4afb4.png" alt=""></p>
+<p><img src="/posts/posts_images/aiweb_day17/05b513fdf323bf46c95556cab7094b66.png" alt=""></p>
+<p>자동으로 React 애플리케이션이 열렸습니다.</p>
+<p>웹사이트에 구현이 된 상태로 react app이 만들어졌습니다.</p>
+<p><code>src</code> 폴더 안에 있는 <code>index.js</code> 파일은 리액트 애플리케이션이 실행될 때 가장 먼저 실행되는 진입점(entry point) 역할을 수행한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p><code>&lt;App /&gt;</code> 태그는 App의 UI 전체를 포함하는 태그입니다.
+이 태그를 지우면 <code>index.js</code>를 실행해도 웹 브라우저 화면에 아무것도 나타나지 않습니다.</p>
+<p>React의 loading screen은 <code>&lt;App /&gt;</code> 태그 또는 컴포넌트 안에 구현되어 있습니다.</p>
+<p>App06.js 실습</p>
+<ul>
+<li>상태 관리 component 만들기</li>
+<li>JS 파일과 stylesheet(.css) 파일 만들기</li>
+<li><code>index.js</code>에서 import하는 App 이름 변경</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="p">[</span> <span class="nx">lottoNumbers</span><span class="p">,</span> <span class="nx">setLottoNumbers</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">year</span> <span class="o">=</span> <span class="nx">today</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">month</span> <span class="o">=</span> <span class="nx">today</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">date</span> <span class="o">=</span> <span class="nx">today</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">year</span><span class="si">}</span><span class="sb">년 </span><span class="si">${</span><span class="nx">month</span><span class="si">}</span><span class="sb">월 </span><span class="si">${</span><span class="nx">date</span><span class="si">}</span><span class="sb">일`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s1">&#39;container&#39;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span> <span class="o">=</span> <span class="s1">&#39;lotto&#39;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">now</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/span&gt; 로또 번호 추첨&lt;/h3&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day17/output1.png" alt=""></p>
+<p>App method <code>map</code> 사용</p>
+<ul>
+<li>배열의 map &ndash; React에서 많이 사용할 예정</li>
+</ul>
+<p>lottoNumbers</p>
+<ul>
+<li>프로그램 초기에 비어 있는 배열</li>
+<li>나중에 숫자 6개 채워질 예정</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// JavaScript callback function (indicated by arrow as if to say that the function will call the callback)
+</span></span></span></code></pre></div><p>map()에는 callback이 들어가고, map의 callback 함수에는 자동으로 인자가 들어간다고 배웠습니다.
+자동으로 들어가는 인자는 배열의 요소이기 때문입니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">lottoNumbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{})</span>
+</span></span></code></pre></div><p>index 번호를 하나씩 차례대로 받아가면서 요소를 return합니다. JSX에서는 component를 return할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">lottoNumbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#39;eachnum&#39;</span><span class="p">&gt;{</span><span class="nx">num</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})}</span>
+</span></span></code></pre></div><p>배열에다 map을 했으니 배열의 요소 수만큼으로 된 새로운 배열을 생성할 수 있다. 거기에다가 component를 채웁니다. component의 배열이 결괃적으로 반환이 된다. component 배열은 곧 component rendering으로 이어집니다.</p>
+<p>동일한 패턴으로 6개 데이터가 나옵니다.</p>
+<p>map을 이용한 컴포넌트 렌더링 시에는, 개별 요소에 key 속성을 추가한다.
+개별 요소에다가 key 속성을 추가해서 서로 다르다고 표시하라고 react에서 요구를 한다. React에서 요구하응 것이고, 일반 JavaScript에서 요구하는 것이 아닙니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">lottoNumbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#39;eachnum&#39;</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}&gt;{</span><span class="nx">num</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})}</span>
+</span></span></code></pre></div><p>여기까지 숫자를 표시하는 로직이 끝났습니다. 이제는 버튼을 만들어야 합니다.</p>
+<br>
+<h3 id="버튼-만들기">버튼 만들기</h3>
+<h3 id="1-추첨-버튼">1) 추첨 버튼</h3>
+<p>버튼을 누르면 setLottoNumbers 화면에 변화를 바로 가져가게 합니다.
+NOTE. 숫자 표시 로직은 유사합니다.</p>
+<p>while문이 끝나면 추첨이 끝난다. 이때 setLottoNumbers 배열을 temp(상태)로 업데이트 하면 됩니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="nx">temp</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="nx">temp</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">let</span> <span class="nx">ran</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">45</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="nx">temp</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">ran</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">temp</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">ran</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">setLottoNumbers</span><span class="p">(</span><span class="nx">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}}&gt;</span><span class="nx">추첨</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div><br>
+<p>버튼 누르기 전 <br>
+<img src="/posts/posts_images/aiweb_day17/output2.png" alt=""></p>
+<p>버튼 누른 후 <br>
+<img src="/posts/posts_images/aiweb_day17/output3.png" alt=""></p>
+<h3 id="2-초기화-버튼">2) 초기화 버튼</h3>
+<p>우선, 이 단계에서 stylesheet를 첨부했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import &#34;./App06.css&#34;
+</span></span></code></pre></div><br>
+<p>Stylesheet를 연결하고 나서 아래와 같이 결과가 달라졌습니다.</p>
+<p><img src="/posts/posts_images/aiweb_day17/output_draft.png" alt=""></p>
+<p>다시 버튼을 누를 때 로또 숫자들을 초기화할 수 있도록, <code>setLottoNumbers</code>를 다시 빈 배열로 만듭니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">setLottoNumbers</span><span class="p">([])</span>
+</span></span><span class="line"><span class="cl"><span class="p">}}&gt;</span><span class="nx">다시</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><br><br><br></p>
+<h2 id="과제--lotto-프로그램-꾸미기">과제 &gt; lotto 프로그램 꾸미기</h2>
+<hr>
+<br>
+<h3 id="1-google-fonts-가져오기">1. Google Fonts 가져오기</h3>
+<p>아래 링크를 <code>App06.css</code> 파일 안에 아래의 Google Fonts 링크를 첨부했습니다.</p>
+<p>이 과제에서 제가 선택한 폰트는 Fira Mono와 Noto Sans KR입니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&amp;display=swap&#39;</span><span class="o">)</span>
+</span></span></code></pre></div><br>
+<h3 id="2-색깔-변경-및-다양한-효과-추가하기">2. 색깔 변경 및 다양한 효과 추가하기</h3>
+<p>윈도우 resizing해도 container를 center 포지션으로 자동으로 고정하는 기능을 CSS로 추가했습니다.</p>
+<p>Animate.css라는 pre-made 애니메이션 컴포넌츠 라이브러리를 사용하여 추첨 버튼을 클릭할 때마다 숫자들이 나타나면서 바운스 애니메이션을 실행했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">lottoNumbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`eachnum </span><span class="si">${</span><span class="nx">animate</span> <span class="o">?</span> <span class="s1">&#39;animate__animated animate__bounceIn&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}&gt;{</span><span class="nx">num</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})}</span>
+</span></span></code></pre></div><p><br><br></p>
+<h2 id="output">OUTPUT</h2>
+<hr>
+<br>
+<p><img src="/posts/posts_images/aiweb_day17/myapp_output.png" alt=""></p>
+<p>SOURCE. <a href="https://github.com/ganyunhee/ai_webdev/tree/main/react/0808_react_myapp">https://github.com/ganyunhee/ai_webdev/tree/main/react/0808_react_myapp</a></p>
+<p><br><br><br></p>
+<p><br><br><br><br></p>
+<h4 id="heading">——————————————————————————</h4>
+<p>본 후기는 정보통신산업진흥원(NIPA)에서 주관하는 &lt;AI 서비스 완성! AI+웹개발 취업캠프 - 프론트엔드&amp;백엔드&gt; 과정 학습/프로젝트/과제 기록으로 작성 되었습니다.
+#정보통신산업진흥원 #NIPA #AI교육 #프로젝트 #유데미 #IT개발캠프 #개발자부트캠프 #프론트엔드 #백엔드 #AI웹개발취업캠프 #취업캠프 #개발취업캠프</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/ganyunhee/" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+    <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+</body>
+</html>

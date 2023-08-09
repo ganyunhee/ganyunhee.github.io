@@ -6,7 +6,19 @@
     <description>Recent content in Slowly getting somewhere on CODENAME | EUNS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 17</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day17/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day17/</guid>
+      <description>CONTENTS SUMMARY 학습 목표 Week 4: 1회차 CONTINUATION Week 4: 2회차 START 과제 &amp;gt; lotto 프로그램 꾸미기 OUTPUT 학습 목표 NodeJS와 JavaScript 코딩 마무리한다. React Application을 만드는 과정을 배운다. JavaScript에서 만들었던 코드를 React와 JSX로 만드는 실습을 한다. Week 4: 1회차 CONTINUATION 저번에는 addMorgan.js와 Node JS module에 대해서 배웠습니다.
+이번에는 addURL.js를 통해 url을 연결시키는 방법을 배웠습니다.
+RECALL 노드 기반의 JS Project
+서버 만들기 &amp;ndash; 데이터를 제공하는 컴퓨터 또는 프로그램 서버를 통해 문서를 제공할 때 주의할 점 &amp;ndash; 서버가 문서들을 읽어서 적용 const url = require(&amp;#39;url&amp;#39;); 서버는 문서의 주소를 해석해서 문서를 제공합니다.</description>
+    </item>
+    
     <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 16</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day16/</link>
