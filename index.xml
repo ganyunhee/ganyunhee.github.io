@@ -6,7 +6,17 @@
     <description>Recent content in Slowly getting somewhere on CODENAME | EUNS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Udemy - React [PART I]</title>
+      <link>http://ganyunhee.github.io/posts/udemy_req_react/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/udemy_req_react/</guid>
+      <description>CONTENTS SUMMARY INTRODUCTION Wny React? INFOGRAPHICS REFERENCES INTRODUCTION 4주차부터 프론트엔드 과정이 시작되오니 React를 배우기 시작했습니다. 하지만 React를 활용하기 위해 JavaScript를 먼저 이해하면 좋으니 JavsScript 입문부터 다시 복습하고 있습니다. 다행히도 이번 유데미 강의에서 React를 학습하기 위한 JavaScript 내용이 포함되어 있으니 이번주는 JavaScript 다시 배우고 실습했습니다.
+시간이 압박하니 변수와 상수 또는 자료형, 연산자 등 이미 많이 배워본 기본적인 내용을 조금만 실습했습니다. 그 다음, JavaScript 응용과 관련된 내응에 더욱 집중하여 많이 다루지 못했던 개념들을 파악하려고 노력했습니다.</description>
+    </item>
+    
     <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 19</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day19/</link>
