@@ -8,6 +8,31 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 19</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day19/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day19/</guid>
+      <description>CONTENTS SUMMARY 학습 목표 주요한 JavaScript 스킬 리뷰 CRA 미니 프로젝트 과정 : 할일 목록 만들기 CRA 미니 프로젝트 결과 : 할일 목록 만들기 TO IMPROVE REFERENCES 학습 목표 미니 프로젝트 진행에 필요한 세부 기술을 리뷰한다. 미니 프로젝트로 할일 목록(TODO List) React App 만든다. 미니 프로젝트를 netlify를 통해 배포한다. 주요한 JavaScript 스킬 리뷰 할일 목록 프로젝트 작업을 진행하기에 앞서서 먼저 주요한 JavaScript 스킬이나 React 라이브러리를 리뷰했습니다.
+Sample.js 만들기 TODO List를 만들기 전에 Sample.</description>
+    </item>
+    
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 18</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day18/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day18/</guid>
+      <description>CONTENTS SUMMARY 학습 목표 학습 목표 애니메이션 및 query에 대한 이해를 높이기 위해 학습한다. CRA (Create-React-App)
+ref. create-react-app.dev
+tool for creating single-page React applications
+npx create-react-app my-app Web Hosting
+윕호스팅 서비스들 중에 이 프로젝트에서 사요할 서비스는 Netlify입니다.
+Netlify
+REFERENCES Inside create-react-app. https://medium.datadriveninvestor.com/inside-create-react-app-8f37ed9372f8 —————————————————————————— 본 후기는 정보통신산업진흥원(NIPA)에서 주관하는 &amp;lt;AI 서비스 완성! AI+웹개발 취업캠프 - 프론트엔드&amp;amp;백엔드&amp;gt; 과정 학습/프로젝트/과제 기록으로 작성 되었습니다. #정보통신산업진흥원 #NIPA #AI교육 #프로젝트 #유데미 #IT개발캠프 #개발자부트캠프 #프론트엔드 #백엔드 #AI웹개발취업캠프 #취업캠프 #개발취업캠프</description>
+    </item>
+    
+    <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 17</title>
       <link>http://ganyunhee.github.io/posts/aiweb_day17/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
