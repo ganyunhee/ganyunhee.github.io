@@ -129,30 +129,275 @@
 <br>
 <ul>
 <li><a href="#%ED%95%99%EC%8A%B5-%EB%AA%A9%ED%91%9C">학습 목표</a></li>
+<li><a href="#review">REVIEW</a></li>
+<li><a href="#%EB%88%88%EC%95%8C-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0">눈알 애니메이션 만들기</a></li>
+<li><a href="#%EC%9D%B8%ED%84%B0%EB%84%B7%EC%97%90-%EB%B0%B0%ED%8F%AC">인터넷에 배포</a></li>
+<li><a href="#references">REFERENCES</a></li>
 </ul>
 <p><br><br><br></p>
 <h2 id="학습-목표">학습 목표</h2>
 <hr>
 <br>
 <ul>
-<li>애니메이션 및 query에 대한 이해를 높이기 위해 학습한다.</li>
+<li>CRA 활용, React Hook (useEffect()) 에 대해서 이어서 알아본다.</li>
+<li>애니메이션 및 media-query에 대한 이해를 높이기 위해 학습한다.</li>
+<li>styled-components와 keyframes 활용을 학습하여 간단한 애니메이션을 만든다.</li>
+<li>Netlify라는 웹호스팅 서비스를 이용하여 React로 만든 앱을 인터넷에 배포하는 방법을 배운다.</li>
 </ul>
 <p><br><br><br></p>
-<p>CRA (Create-React-App)</p>
-<p>ref. create-react-app.dev</p>
-<p>tool for creating single-page React applications</p>
+<h2 id="review">REVIEW</h2>
+<hr>
+<br>
+<h3 id="what-is-cra">What is CRA?</h3>
+<p>CRA 또는 Create-React-App은 React를 만든 팀이 지원하는 SPA(Single Page Application)을 만들기 위해 사용하는 툴입니다.</p>
+<p>다음 명령어를 실행하면 CRA를 통해 기본 템플릿을 가지고 있는 <code>my-app</code> 이라는 React 앱이 자동으로 생성됩니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npx create-react-app my-app
 </span></span></code></pre></div><p><br><br><br></p>
-<p>Web Hosting</p>
-<p>윕호스팅 서비스들 중에 이 프로젝트에서 사요할 서비스는 Netlify입니다.</p>
-<p>Netlify</p>
+<h3 id="files--terminology-used-in-cra-and-react">Files &amp; Terminology used in CRA and React</h3>
+<p>index.html</p>
+<ul>
+<li>contains metadata, basic information and data for react app</li>
+<li>can change title of webpage here</li>
+</ul>
+<p>index.js</p>
+<ul>
+<li>calls on the components of React App and shows them on screen</li>
+</ul>
+<p>React Component</p>
+<ul>
+<li>React app에서 표시해주는 웹 콘텐츠(요소)</li>
+</ul>
+<p>JSX</p>
+<ul>
+<li>React 앱에서 콘텐츠를 표현하는 문법</li>
+</ul>
+<p>함수형 component</p>
+<ul>
+<li>JavaScript 함수가 마크업 콘텐츠를 반환하는 형태</li>
+</ul>
+<p><br><br><br></p>
+<h3 id="react-hook">React Hook</h3>
+<p>React Hook란 함수형 component에다가 기능을 추가하는 함수입니다.
+지금까지 리액트 후크들 중에 <code>useState()</code>와 <code>useEffect()</code>를 실습하면서 사용을 해봤습니다.</p>
+<h4 id="useeffect"><code>useEffect</code></h4>
+<ul>
+<li>react component의 생명주기에 따라 동작을 제어할 수 있는 기능을 제공한다.</li>
+<li>callback 함수를 입력받아 특정 생명주기마다 이를 호출한다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">useEffect(callback_function)
+</span></span></code></pre></div><p>또한 두번째 인수(argument)로 의존성 배열을 전달받아 callback 함수의 호출 타이밍을 결정한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">useEffect(callback_function, dependency_array)
+</span></span></code></pre></div><p>의존성 배열에 상태명을 입력하면, 특정 상태가 변경될 때마다 callback 함수가 동작하도록 설정할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">useEffect(() =&gt; {
+</span></span><span class="line"><span class="cl">	console.log(&#39;todo 값이 설정됨&#39;);
+</span></span><span class="line"><span class="cl">}, [todo]); 
+</span></span></code></pre></div><p>NOTE. 상태 todo가 변경되면 이 callback 함수가 동작할 예정이다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// input에 입력되는 내용을 state(상태)에다 저장 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 처음에 아무것도 입력하지 않은 상태 --&gt; useState() 초기화 --&gt; &#34;&#34; 문자열로
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 결과 : text, setText
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="p">[</span><span class="nx">text</span><span class="p">,</span> <span class="nx">setText</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">&lt;&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#39;아무 내용&#39;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{</span><span class="nx">text</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day18/useEffect_1.png" alt=""></p>
+<h3 id="text-상태를-업데이트하면서-표시하는-방법">text 상태를 업데이트하면서 표시하는 방법</h3>
+<p>상태가 변화되려면 상태 변화 함수를 같이 사용해야 한다고 배웠습니다.
+상태 변화 함수는 <code>useState()</code>가 자동으로 만들어주니 이름만 붙여서 쓰면 됩니다. 여기서 텍스트 내용을 변경해주는 상태 변화 함수를 <code>setText</code>라고 부르겠습니다.</p>
+<p><code>setText</code>를 부르기 전, 먼저 텍스느 내용이 바뀔 때마다 변화가 <code>useState()</code>를 통해 잘 인식되는지 확인했습니다. 이를 확인하기 위해 텍스트 내용을 입력하면서 콘솔 창에 상태마다의 텍스트 변화를 출력했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">&lt;&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#39;아무 내용&#39;</span> <span class="na">onChange</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">}}/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{</span><span class="nx">text</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/&gt;</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day18/useEffect_2.png" alt=""></p>
+<p>상태의 변화가 잘 인식되는 것을 확인한 후, 내용이 변경될 때마다 <code>setText</code> 함수를 호출하도록 설정했습니다. 다음과 같이 input에서 <code>onChange()</code> 속성을 통해 event handler 함수 <code>setText</code>를 호출했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">&lt;&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#39;아무 내용&#39;</span> <span class="na">onChange</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">setText</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">}}/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{</span><span class="nx">text</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/&gt;</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day18/useEffect_3.png" alt=""></p>
+<p><br><br><br></p>
+<h2 id="눈알-애니메이션-만들기">눈알 애니메이션 만들기</h2>
+<hr>
+<br>
+<p>styled-components와 keyframes 가져오기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">styled</span><span class="p">,</span> <span class="p">{</span> <span class="nx">keyframes</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;styled-components&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>눈알 컴포넌츠</p>
+<ul>
+<li>눈알을 표시하는 웹요소로 styled 컴포넌츠 하나 만들기</li>
+</ul>
+<p>눈알 2개를 가운데 병렬하기 위해 하나의 container로 사용할 Eyes를 만들어봤습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Eyes</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  justify-content: center;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>그 다음, 각 눈알로 사용할 Eye 컴포넌트 만들었습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Eye</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 200px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 200px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border: 5px solid black;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border-radius: 50%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: relative;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>NOTE. <code>position: relative;</code>를 사용한 이유는 position을 통해 Eyes의 자식 요소가 될 눈알을 제어할 예정이기 때문입니다.</p>
+<p>그리고 각 눈알 안에서 움직일 눈동자 컴포넌트 Pupil을 만들었습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Pupil</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 40px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 40px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-color: brown;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border-radius: 50%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: absolute;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>NOTE. 눈동자는 어떤 시작점에서 부터 자유롭게 왔가갔다 이동을 시킬 것이기 때문에<code>position: absolute;</code>를 통해 절대위치를 지정했습니다. absolute position은 상위 요소/부모 요소의 기준을 잡게 됩니다.</p>
+<p>asbsolute position은 position이 지정된 요소를 기준으로 움직이기 때문에 상위 요소는 relative position이 지정되어 있어야 합니다.</p>
+<p>이 상태에서 keyframe을 만들어서 animation을 넣고 싶은 component에다 keyframe을 적용하면 animation을 만들 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">moving</span> <span class="o">=</span> <span class="nx">keyframes</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  from {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 40%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 10%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  to {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 40%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 70%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Pupil</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 40px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 40px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-color: brown;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border-radius: 50%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: absolute;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  animation: </span><span class="si">${</span><span class="nx">moving</span><span class="si">}</span><span class="sb"> 3s 0s linear alternate infinite;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// speed 3s, no delay, linear acceleration, alternate direction, infinite loop
+</span></span></span></code></pre></div><p>NOTE. <code>alternate</code>는 애니메이션 keyframe이 이동하는 방향을 번갈아 reverse하여 나타내는 setting입니다. <code>alternate</code>를 설정해야 눈동자는 왼쪽에서 오른쪽으로 갔다가 왼쪽에서 다시 시작하지 않고 오른쪽에서 왼쪽으로 가고, 왼쪽에서 오른쪽으로 가서 실제 눈처럼 움직이는 자연스러운 애니메이션 효과를 낼 수 있습니다.</p>
+<p>마침내로, 화면에 모두 표시를 해봅니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Eyes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">Eye</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;left_eye&#34;</span><span class="p">&gt;&lt;</span><span class="nt">Pupil</span> <span class="p">/&gt;&lt;/</span><span class="nt">Eye</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">Eye</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;right_eye&#34;</span><span class="p">&gt;&lt;</span><span class="nt">Pupil</span> <span class="p">/&gt;&lt;/</span><span class="nt">Eye</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Eyes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>className</code>을 만들 필요가 없지만, 코드에서 구별할 수 있기 위해 왼쪽과 오른쪽 눈알의 <code>className</code>을 지었습니다.</p>
+<h4 id="output">OUTPUT</h4>
+<img src="/posts/posts_images/aiweb_day18/animated_eyes_final.gif" style="width: 500px;">
+<br>
+<h4 id="additional">ADDITIONAL</h4>
+<p>눈동자의 크기를 증가하고 추가로 눈동자 색깔이 빠뀌면서 위치가 위아래로 가는 애니메이션을 넣어봤습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">rollingColor</span> <span class="o">=</span> <span class="nx">keyframes</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  from {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 40%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 10%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  25% {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-color: #F1C40F;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 20%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 20%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  50% {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-color: #0FDBDB;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 10%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 25%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  75% {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-color: #C9EDED;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 20%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 30%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  100% {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-color: #D5D8DC;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    top: 40%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    left: 40%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Pupil</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 100px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 100px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-color: brown;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border-radius: 50%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: absolute;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  animation: </span><span class="si">${</span><span class="nx">rollingColor</span><span class="si">}</span><span class="sb"> 3s 0s linear alternate infinite;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>그리고, <code>App06.css</code> 스타일시트 파일을 만들어 배경 색깔을 넣고 눈알의 위치와 스타일링을 변경했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="c1">// App06.css
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="err">#</span><span class="mi">1</span><span class="nx">C2833</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="c1">// App06.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="s1">&#39;./App06.css&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="c1">// 눈알 2개를 중앙으로 설정
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">Eyes</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  justify-content: center;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  align-items: center;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 100vh;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 눈알의 배경색깔을 하얀색으로, border 색깔을 커스텀 색깔로 설정
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">Eye</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 200px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 200px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border: 20px solid #212F3D;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border-radius: 50%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: relative;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-color: #FCFCFC;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><img src="/posts/posts_images/aiweb_day18/animated_eyes_modified_final.gif" style="width: 1000px;">
+<p><br><br><br></p>
+<h2 id="media-queries">Media Queries</h2>
+<hr>
+<br>
+<p>요즘 반응형(Interactive) 웹사이트를 만드는 과정에 미디어 쿼리(Media Query)가 많이 활용되고 있습니다.</p>
+<p>미디어 쿼리(Media Query)란 media의 type을 인식하고 contents를 읽어들이는 기기나 브라우저의 물리적 속성을 감지할 수 있는 유용한 모듈 또는 기능입니다.</p>
+<p>각 미디어 쿼리는 항상 두 가지의 요소로 구성되어 있습니다.</p>
+<ol>
+<li>media type</li>
+<li>query (조건에 대한 물음)</li>
+</ol>
+<br>
+<h3 id="styled-components--media-query">styled-components + media query</h3>
+<p>styled component 내부에 media query 적용 스타일의 선언문을 다음과 같이 정의할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Box</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 100px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    height: 100px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-color: tomato;
+</span></span></span><span class="line"><span class="cl"><span class="sb">
+</span></span></span><span class="line"><span class="cl"><span class="sb">    //media query 선언
+</span></span></span><span class="line"><span class="cl"><span class="sb">    @media screen and (min-width: 768px) {
+</span></span></span><span class="line"><span class="cl"><span class="sb">        width: 50px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        height: 50px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p><br><br><br></p>
+<h2 id="인터넷에-배포">인터넷에 배포</h2>
+<hr>
+<br>
+<p>인터넷에 어떤 웹앱이나 웹사이트를 쉽게 배포할 수 있게 해주는 서비스는 웹호스팅 (Web Hosting) 서비스라고 합니다. 윕호스팅(Web Hosting) 서비스들 중에 Netlify라는 서비스를 한번 사용해봤습니다.</p>
+<p>CRA(Create-React-App)을 통해 <code>npm run build</code> 명령어를 실행하여 build 폴더를 만든 후, 해당 build 폴더를 Netlify에 업로드하여 움직이는 애니메이션을 포함한 웹앱을 배포해 봤습니다.</p>
+<h3 id="netlify-링크">Netlify 링크</h3>
+<p><a href="https://nipa-frontend-animated-eyes-4-eunice.netlify.app/">https://nipa-frontend-animated-eyes-4-eunice.netlify.app/</a></p>
 <p><br><br><br></p>
 <h2 id="references">REFERENCES</h2>
 <hr>
 <br>
 <ul>
+<li>Create React App (Official Documentation).
+<a href="https://create-react-app.dev/">https://create-react-app.dev/</a></li>
 <li>Inside create-react-app.
 <a href="https://medium.datadriveninvestor.com/inside-create-react-app-8f37ed9372f8">https://medium.datadriveninvestor.com/inside-create-react-app-8f37ed9372f8</a></li>
+<li>Using the Effect Hook.
+<a href="https://legacy.reactjs.org/docs/hooks-effect.html">https://legacy.reactjs.org/docs/hooks-effect.html</a></li>
+<li>Built-in React Hooks.
+<a href="https://react.dev/reference/react">https://react.dev/reference/react</a></li>
 </ul>
 <p><br><br><br><br></p>
 <h4 id="heading">——————————————————————————</h4>
