@@ -6,7 +6,20 @@
     <description>Recent content in diary on CODENAME | EUNS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://ganyunhee.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 23</title>
+      <link>http://ganyunhee.github.io/posts/aiweb_day23/</link>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://ganyunhee.github.io/posts/aiweb_day23/</guid>
+      <description>CONTENTS SUMMARY 학습 목표 Card App 만들기 과정 Card App 커스터마이징 OUTPUT TO IMPROVE REFERENCES 학습 목표 Redux와 React Router 라이브러리의 함수들 활용 실습을 한다. React를 통해 Card App을 만들어본다. Card App 만들기 과정 Initial Installations Redux
+npm install react-redux React Router
+npm install react-router-dom Styled Components
+npm install styled-components 각 파일의 코드 및 기능 살펴보기 index.js
+import { Provider } from &amp;#39;react-redux&amp;#39;; //통합/관리 import { store } from &amp;#39;./utilities/contents&amp;#39;; //상태 관리 const root = ReactDOM.</description>
+    </item>
+    
     <item>
       <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Udemy - React [PART I]</title>
       <link>http://ganyunhee.github.io/posts/udemy_req_react/</link>
