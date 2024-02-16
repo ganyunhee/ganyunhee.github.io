@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 23 - CODENAME | EUNS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://ganyunhee.github.iofavicon.png">
+  <link rel="canonical" href="http://ganyunhee.github.io/posts_temp/aiweb_day23/" />
+    
+    
+    <link rel="stylesheet" href="/css/style.min.12689d26dec68ff1deb48e6d9ce0a84891b7ae2fce8a1ecf714fc79049b5476c.css">
+    <link rel="stylesheet" href="/assets/css/extended.min.9729f28a5087b689b946e103d96abd63bfd37b1417effa251dbf798312e3fba5.css">
+
+  
+    
+    <meta property="og:title" content="[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 23"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ganyunhee.github.io/posts_temp/aiweb_day23/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    
+    
+  
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira&#43;Mono&amp;family=Inter&amp;family=Inter&#43;Tight&amp;family=Bebas&#43;Neue&amp;display=swap" rel="stylesheet">
+  
+
+  
+</head>
+
+
+
+
+<body class='page frame page-default-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-home">
+                    <a href="http://ganyunhee.github.io/">Home</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-blog">
+                    <a href="http://ganyunhee.github.io/posts/">Blog</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-about">
+                    <a href="http://ganyunhee.github.io/pages/about/">About</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-tags">
+                    <a href="http://ganyunhee.github.io/tags/">Tags</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="/">CODENAME | EUNS</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      
+      
+      <li class="menu-item-home ">
+        <a href="/">
+          
+          <span>Home</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog ">
+        <a href="/posts/">
+          
+          <span>Blog</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-about ">
+        <a href="/pages/about/">
+          
+          <span>About</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="menu-item-tags ">
+        <a href="/tags/">
+          
+          <span>Tags</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+<div class="intro">
+  <h1>[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 23<span class="dot">.</span></h1>
+  
+</div>
+
+<div class="content">
+  <h1 id="contents-summary">CONTENTS SUMMARY</h1>
+<hr>
+<br>
+<ul>
+<li><a href="#%ED%95%99%EC%8A%B5-%EB%AA%A9%ED%91%9C">학습 목표</a></li>
+<li><a href="#card-app-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B3%BC%EC%A0%95">Card App 만들기 과정</a></li>
+<li><a href="#card-app-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95">Card App 커스터마이징</a></li>
+<li><a href="#output">OUTPUT</a></li>
+<li><a href="#to-improve">TO IMPROVE</a></li>
+<li><a href="#references">REFERENCES</a></li>
+</ul>
+<p><br><br><br></p>
+<h2 id="학습-목표">학습 목표</h2>
+<hr>
+<br>
+<ul>
+<li>Redux와 React Router 라이브러리의 함수들 활용 실습을 한다.</li>
+<li>React를 통해 Card App을 만들어본다.</li>
+</ul>
+<p><br><br><br></p>
+<h2 id="card-app-만들기-과정">Card App 만들기 과정</h2>
+<hr>
+<br>
+<h3 id="initial-installations">Initial Installations</h3>
+<p>Redux</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install react-redux
+</span></span></code></pre></div><p>React Router</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install react-router-dom
+</span></span></code></pre></div><p>Styled Components</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install styled-components
+</span></span></code></pre></div><p><br><br><br></p>
+<h3 id="각-파일의-코드-및-기능-살펴보기">각 파일의 코드 및 기능 살펴보기</h3>
+<p>index.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-redux&#39;</span><span class="p">;</span> <span class="c1">//통합/관리
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">store</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./utilities/contents&#39;</span><span class="p">;</span> <span class="c1">//상태 관리
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">React.StrictMode</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Provider</span> <span class="na">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">App</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Provider</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">React.StrictMode</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p>utilties/contents.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="c1">// reducer : 상태관리를 담당한 함수
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
+</span></span></code></pre></div><p>App.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">BrowserRouter</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">내가</span> <span class="nx">좋아하는</span> <span class="nx">무언가의</span> <span class="nx">콜렉션</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span><span class="nx">useSelector</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">contents</span><span class="p">).</span><span class="nx">map</span><span class="p">((</span><span class="nx">content</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">path</span><span class="p">}</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Detail</span> <span class="na">content</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">detail</span><span class="p">}</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">})}</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Cards</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">BrowserRouter</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><blockquote>
+<p>BrowserRouter : redux router
+<br>
+Routes : router routes</p>
+</blockquote>
+<p>Detail.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useNavigate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span> <span class="c1">// useNavigate: component 이동 기록 다루는 함수
+</span></span></span></code></pre></div><blockquote>
+<p>Back button을 구현하기 위해 useNavigate를 사용했습니다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">contents</span><span class="p">.</span><span class="nx">map</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//Insert card items here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">&lt;</span><span class="nt">Item</span><span class="p">&gt;&lt;/</span><span class="nt">Item</span><span class="p">&gt;</span> <span class="c1">//represents a card
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day23/cardapp_init_1.png" alt=""></p>
+<p><img src="/posts/posts_images/aiweb_day23/cardapp_init_2.png" alt=""></p>
+<br>
+<p>contents.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;redux&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 카드 개별 항목에 대한 내용을 담은 배열
+</span></span></span><span class="line"><span class="cl"><span class="c1">// detail : 상세 페이지에 담고 싶은 내용을 객체 literal로 표현한 키 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">contents</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span><span class="s2">&#34;/red&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">imagePath</span><span class="o">:</span> <span class="s2">&#34;red&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;빨간색&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">character</span><span class="o">:</span> <span class="s2">&#34;빨간색입니다&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">detail</span><span class="o">:</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span><span class="s2">&#34;/blue&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">imagePath</span><span class="o">:</span> <span class="s2">&#34;blue&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;파란색&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">character</span><span class="o">:</span> <span class="s2">&#34;파란색입니다&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">detail</span><span class="o">:</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span><span class="s2">&#34;/purple&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">imagePath</span><span class="o">:</span> <span class="s2">&#34;purple&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;보라색&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">character</span><span class="o">:</span> <span class="s2">&#34;보라색입니다&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">detail</span><span class="o">:</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 이 앱에서는 상태에 대한 변경 진행하지 않음
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">reducer</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span> <span class="nx">contents</span> <span class="p">}</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// reducer : 상태관리를 담당한 함수
+</span></span></span><span class="line"><span class="cl"><span class="c1">// reducer를 전달받아서 저장소를 생성하는 함수는 createStore
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
+</span></span></code></pre></div><p>index.css</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="err">@</span><span class="nx">font</span><span class="o">-</span><span class="nx">face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">family</span><span class="o">:</span> <span class="s1">&#39;GowunDodum-Regular&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">src</span><span class="o">:</span> <span class="nx">url</span><span class="p">(</span><span class="s1">&#39;https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff&#39;</span><span class="p">)</span> <span class="nx">format</span><span class="p">(</span><span class="s1">&#39;woff&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">weight</span><span class="o">:</span> <span class="nx">normal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">style</span><span class="o">:</span> <span class="nx">normal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">*</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">family</span><span class="o">:</span> <span class="s1">&#39;GowunDodum-Regular&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="nx">black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">family</span><span class="o">:</span> <span class="o">-</span><span class="nx">apple</span><span class="o">-</span><span class="nx">system</span><span class="p">,</span> <span class="nx">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">&#39;Segoe UI&#39;</span><span class="p">,</span> <span class="s1">&#39;Roboto&#39;</span><span class="p">,</span> <span class="s1">&#39;Oxygen&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Ubuntu&#39;</span><span class="p">,</span> <span class="s1">&#39;Cantarell&#39;</span><span class="p">,</span> <span class="s1">&#39;Fira Sans&#39;</span><span class="p">,</span> <span class="s1">&#39;Droid Sans&#39;</span><span class="p">,</span> <span class="s1">&#39;Helvetica Neue&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">font</span><span class="o">-</span><span class="nx">smoothing</span><span class="o">:</span> <span class="nx">antialiased</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span><span class="nx">moz</span><span class="o">-</span><span class="nx">osx</span><span class="o">-</span><span class="nx">font</span><span class="o">-</span><span class="nx">smoothing</span><span class="o">:</span> <span class="nx">grayscale</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">code</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">family</span><span class="o">:</span> <span class="nx">source</span><span class="o">-</span><span class="nx">code</span><span class="o">-</span><span class="nx">pro</span><span class="p">,</span> <span class="nx">Menlo</span><span class="p">,</span> <span class="nx">Monaco</span><span class="p">,</span> <span class="nx">Consolas</span><span class="p">,</span> <span class="s1">&#39;Courier New&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">monospace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>App.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span><span class="p">,</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">Routes</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Menu</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./styeldComp&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Cards</span> <span class="nx">from</span> <span class="s1">&#39;./Cards&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Detail</span> <span class="nx">from</span> <span class="s1">&#39;./Detail&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-redux&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">BrowserRouter</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">내가</span> <span class="nx">좋아하는</span> <span class="nx">무언가의</span> <span class="nx">콜렉션</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span><span class="nx">useSelector</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">contents</span><span class="p">).</span><span class="nx">map</span><span class="p">((</span><span class="nx">content</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">path</span><span class="p">}</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Detail</span> <span class="na">content</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">detail</span><span class="p">}</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">})}</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Cards</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">BrowserRouter</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</span></span></code></pre></div><p>Detail.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useNavigate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span> <span class="c1">// useNavigate: component 이동 기록 다루는 함수
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Detail</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">paddingTop</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span> <span class="nx">textAlign</span><span class="o">:</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;white&#39;</span><span class="p">}}&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">전달된</span> <span class="nx">속성값을</span> <span class="nx">토대로</span> <span class="nx">페이지</span> <span class="nx">구성하기</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)}&gt;</span><span class="nx">BACK</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Detail</span>
+</span></span></code></pre></div><p>styledComp.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">styled</span> <span class="nx">from</span> <span class="s1">&#39;styled-components&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Menu</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: sticky; top: 0;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 100%; height: 100px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  font-size: 18px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  color: #FFFFFF;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex; 
+</span></span></span><span class="line"><span class="cl"><span class="sb">  justify-content: center;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  align-items: center;  
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Items</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  flex-wrap: wrap;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 60%; margin: 0 auto;
+</span></span></span><span class="line"><span class="cl"><span class="sb">
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 1500px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 80%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 1000px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 100%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Item</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  cursor: pointer;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 21%; height: 400px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  margin: 2%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  border-radius: 20px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  color: #FFFFFF;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-color: #393939;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  overflow: hidden;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  &amp;:hover{
+</span></span></span><span class="line"><span class="cl"><span class="sb">    transform: translate(0, -20px);
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 800px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 46%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 500px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 98%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Image</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 250px; 
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-image: url(</span><span class="si">${</span><span class="nx">props</span> <span class="p">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">imagePath</span><span class="si">}</span><span class="sb">);
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-repeat: no-repeat;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 500px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-size: 100% 100%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">ColorBox</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 250px; 
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-color: </span><span class="si">${</span><span class="nx">props</span> <span class="p">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">color</span><span class="si">}</span><span class="sb">;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-repeat: no-repeat;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-size: cover;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 500px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-size: 100% 100%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><blockquote>
+<p>sticky: 상단에 고정</p>
+</blockquote>
+<p>상단에 표시되는 Menu</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Menu</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  position: sticky; top: 0;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 100%; height: 100px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  font-size: 18px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  color: #FFFFFF;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex; 
+</span></span></span><span class="line"><span class="cl"><span class="sb">  justify-content: center;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  align-items: center;  
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><h3 id="media-queries-within-styled-components">Media queries within styled components</h3>
+<p>카드가 여러 개인 경우, <code>flex-wrap</code>을 통해 여러줄로 표시해봤습니다.</p>
+<p>그리고, 화면의 크기에 따라 카드의 크기를 조절하기 위해 styled component 안에서 media query를 정의했습니다.</p>
+<ul>
+<li>1500px보다 작을 때 80% 너비를 차지한다.</li>
+<li>1000px보다 작을 때 100% 너비를 차지한다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Items</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  flex-wrap: wrap;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 60%; margin: 0 auto;
+</span></span></span><span class="line"><span class="cl"><span class="sb">
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 1500px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 80%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 1000px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 100%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>Cards.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">NavLink</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Items</span><span class="p">,</span> <span class="nx">Item</span><span class="p">,</span> <span class="nx">Image</span><span class="p">,</span> <span class="nx">ColorBox</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./styledComp&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-redux&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Cards</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">contents</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">contents</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">Items</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">contents</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">content</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="p">&lt;</span><span class="nt">Item</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">NavLink</span> <span class="na">to</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">path</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ColorBox</span> <span class="na">color</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">imagePath</span><span class="p">}&gt;&lt;/</span><span class="nt">ColorBox</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">textAlign</span><span class="o">:</span><span class="s1">&#39;center&#39;</span><span class="p">}}&gt;{</span><span class="nx">content</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="p">}}&gt;{</span><span class="nx">content</span><span class="p">.</span><span class="nx">character</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Item</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">Items</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Cards</span><span class="p">;</span>
+</span></span></code></pre></div><p><br><br><br></p>
+<h2 id="card-app-커스터마이징">Card App 커스터마이징</h2>
+<hr>
+<br>
+<p>수정할 코드는 다음과 같습니다.</p>
+<ul>
+<li>utilities/contents.js - contents 배열의 내용을 자신의 주제에 맞게 수정하기</li>
+<li>index.css, styledComp.js - 구현된 스타일을 자신의 컨에 맞게 수정하기</li>
+<li>Detail.js를 contents의 내용에 맞게 직접 디자인하고 구현해보기</li>
+</ul>
+<h2 id="modify-cardsjs-navlink">Modify Cards.js <code>&lt;NavLink&gt;</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">NavLink</span> <span class="na">to</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">path</span><span class="p">}</span> <span class="na">state</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">detail</span><span class="p">}&gt;</span>
+</span></span></code></pre></div><h2 id="modify-detailjs">Modify Detail.js</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useNavigate</span><span class="p">,</span> <span class="nx">useLocation</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Add description when clicking on item</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Detail</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">description</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">description</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="c1">//Access the description vis useLocation()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">paddingTop</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span> <span class="nx">textAlign</span><span class="o">:</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;white&#39;</span><span class="p">}}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="p">}}&gt;{</span><span class="nx">description</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)}&gt;</span><span class="nx">BACK</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="image--video-rendering">Image,  Video Rendering</h2>
+<p>원래는 HTML 웹페이지에 이미지 또는 영상을 넣으려면 소스 또는 원래 파일을 가지고 있어야 합니다. 하지만 React를 통해 resource 사용을 줄이도록 <code>&lt;iframe&gt;</code> 요소를 활용할 수 있습니다. <code>&lt;iframe&gt;</code>을 통해 외부의 링크만 받고 영상 또는 이미지를 가져올 수 있습니다.</p>
+<p>이번 실습에서 <code>&lt;iframe&gt;</code>을 통해 유튜브 영상을 한번 embedding해 보겠습니다.</p>
+<h3 id="embed-videos-from-youtube">Embed videos from YouTube</h3>
+<p>웹 페이지에다 유튜브 영상을 임베딩하려면 원하는 영상을 유튜브에서 열어본 후 &lsquo;공유&rsquo;(Share) 버튼을 누른 다음에 &lsquo;Embed&rsquo; 옵션을 선택합니다. &lsquo;Embed&rsquo; 옵션을 선택한 후 아래 창이 나타나 유튜브 플레이어를 호출하여 영상을 플레이해주는 iframe 코드가 생성됩니다. 이를 복사하고 리액트 앱의 코드에서 붙이면 웹 페이지에서 해당 영상을 볼 수 있게 됩니다.</p>
+<p><img src="/posts/posts_images/aiweb_day23/embed_ytvideos.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">detail</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;This is Spiderman, one of the heroes in Marvel comics.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">detailImage</span><span class="o">:</span> <span class="s2">&#34;spiderman.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">videoSrc</span><span class="o">:</span> <span class="sb">`&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Utxk5ankUvw&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;`</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<h3 id="dangerouslysetinnerhtml-attribute"><code>dangerouslySetInnerHTML</code> attribute</h3>
+<p>문자열 형태로 표현된 markup을 react component 내에서 실제 markup을 변환하는 데 <code>dangerouslySetInnerHTML</code> 속성을 활용했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Detail</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">description</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">description</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="c1">//Access the description vis useLocation()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">video</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">videoSrc</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">createMarkup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span> <span class="nx">__html</span><span class="o">:</span> <span class="nx">video</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">paddingTop</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span> <span class="nx">textAlign</span><span class="o">:</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;white&#39;</span><span class="p">}}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="p">}}&gt;{</span><span class="nx">description</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">dangerouslySetInnerHTML</span><span class="o">=</span><span class="p">{</span><span class="nx">createMarkup</span><span class="p">()}&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)}&gt;</span><span class="nx">BACK</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In content.js</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span><span class="s2">&#34;/miguel_ohara&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">imagePath</span><span class="o">:</span> <span class="s2">&#34;miguel_ohara.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;Miguel O&#39;Hara&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">character</span><span class="o">:</span> <span class="s2">&#34;I&#39;m Miguel O&#39;Hara&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">detail</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;This is Spiderman, one of the heroes in Marvel comics.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">detailImage</span><span class="o">:</span> <span class="s2">&#34;spiderman.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">videoSrc</span><span class="o">:</span> <span class="sb">`&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Utxk5ankUvw&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;`</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p><img src="/posts/posts_images/aiweb_day23/cardapp_embed_video.png" alt=""></p>
+<h3 id="uselocation을-사용하지-않은-코드"><code>useLocation()</code>을 사용하지 않은 코드</h3>
+<p>위 코드에서 <code>useLocation</code>을 사용했지만, 이 함수를 사용하지 않아도 Detail에 주어지는 인자인 <code>props</code>안에서 <code>content</code> 안에 있는 내용을 접근할 수 있는 방법을 늦게 알게 되었습니다&hellip; 이 방법은 다음 코드에서 볼 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Detail</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">paddingTop</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span> <span class="nx">textAlign</span><span class="o">:</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;white&#39;</span><span class="p">}}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="p">}}&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">description</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">dangerouslySetInnerHTML</span><span class="o">=</span><span class="p">{{</span><span class="nx">__html</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">videoSrc</span><span class="p">}}&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">margin</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">paddingLeft</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">paddingRight</span><span class="o">:</span> <span class="mi">20</span><span class="p">}}</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)}&gt;</span><span class="nx">BACK</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<p>Add Images instead of color (Replace <code>&lt;ColorBox&gt;</code> with <code>&lt;Image&gt;</code>)</p>
+<p>각 카드의 커버로 색깔 대신에 이미지를 나타낼 수 있도록 <code>&lt;ColorBox&gt;</code> 컴포넌트 대신에 <code>&lt;Image&gt;</code> 컴포넌트를 사용했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">Image</span> <span class="na">imagePath</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">.</span><span class="nx">imagePath</span><span class="p">}&gt;&lt;/</span><span class="nt">Image</span><span class="p">&gt;</span>
+</span></span></code></pre></div><br>
+<h2 id="playing-youtube-video-on-background">Playing YouTube video on background</h2>
+<h3 id="set-width-height">Set width, height</h3>
+<p>set iframe in contents.js : width=100%, height=100%
+div style in Detail.js :  width: 100%, height:100%,</p>
+<h3 id="set-to-background">Set to background</h3>
+<p>position: absolute, top:0, left:0, z-index: -1</p>
+<h3 id="disable-other-functions">Disable other functions</h3>
+<p>Disable hover YT player effects, disable user select</p>
+<p>userSelect: &rsquo;none&rsquo;, pointerEvents: &rsquo;none&rsquo;</p>
+<h3 id="youtube-player-parameters">Youtube Player Parameters</h3>
+<p>controls=0 : disable youtube play, pause, etc. UI controls
+autoplay=1 : play video automatically
+loop=1 : loop video
+playlist={VIDEO_ID} : creates playlist with one specific video for looping
+disablekb=1 : disable youtube player keyboard commands/shortcuts
+mute=1 : mute video
+modestbranding=1 : hide details and branding (deprecated&hellip;)</p>
+<h3 id="edit-indexcss">Edit index.css</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">iframe</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span><span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-60</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span><span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span><span class="mf">56.25</span><span class="kt">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Code added to tweak position of video player and hide some branding, etc.
+Hide scrollbars with <code>overflow:hidden</code> in body tag
+NOTE. Only</p>
+<h3 id="edit-image-styled-component">Edit <code>&lt;Image&gt;</code> styled component</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Image</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  height: 250px; 
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-image: url(</span><span class="si">${</span><span class="nx">props</span> <span class="p">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">imagePath</span><span class="si">}</span><span class="sb">);
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-size: cover;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-position: center;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  background-repeat: no-repeat;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 500px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    background-size: 100% 100%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>Added background-position: center to center character images</p>
+<h3 id="edit-items-styled-component">Edit <code>&lt;Items&gt;</code> styled component</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Items</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">  display: flex;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  flex-wrap: wrap;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  width: 60%; 
+</span></span></span><span class="line"><span class="cl"><span class="sb">  margin: 0 auto;
+</span></span></span><span class="line"><span class="cl"><span class="sb">
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 1600px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 80%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  @media all and (max-width: 1000px){
+</span></span></span><span class="line"><span class="cl"><span class="sb">    width: 100%;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">  /*Center four cards at once*/
+</span></span></span><span class="line"><span class="cl"><span class="sb">  * {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    flex: 0 0 calc(25% - 23px);
+</span></span></span><span class="line"><span class="cl"><span class="sb">    margin-bottom: 20px;
+</span></span></span><span class="line"><span class="cl"><span class="sb">  }
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
+</span></span></code></pre></div><p>Added flexbox code to center four cards per line.</p>
+<p><br><br><br></p>
+<h2 id="output">OUTPUT</h2>
+<hr>
+<br>
+<h3 id="output-video">Output Video</h3>
+<video controls style="width: 100%; height: auto;">
+    <source src="/posts/posts_images/aiweb_day23/cardapp_output.mp4" type="video/mp4">
+</video>
+<br>
+<h3 id="netlify-링크">Netlify 링크</h3>
+<p><a href="https://nipa-frontend-card-app-4-eunice.netlify.app/">https://nipa-frontend-card-app-4-eunice.netlify.app/</a></p>
+<h3 id="source">SOURCE</h3>
+<p><a href="https://github.com/ganyunhee/react_cardapp_custom">https://github.com/ganyunhee/react_cardapp_custom</a></p>
+<p><br><br><br></p>
+<h2 id="to-improve">TO IMPROVE</h2>
+<hr>
+<br>
+<ul>
+<li>텍스트와 레이아웃을 예쁘게 꾸미고 정리할 것
+<ul>
+<li>각 카드의 상세 페이지 내용: 캐릭터 이름을 큰 타이틀로 설정, 그 다음 캐릭터 설명을 추가할 것</li>
+</ul>
+</li>
+<li>상세 페이지에 들어갈 때 각 캐릭터의 theme 음악을 재생할 것
+<ul>
+<li>e.g. Miguel : Miguel Theme, Miles : Sunflower, Gwen : Drum Solo (Across the Spiderverse Intro), Peter : My Name.. is Peter B. Parker</li>
+<li>Sound ON/OFF 기능 버튼 넣을 것</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br></p>
+<h2 id="references">REFERENCES</h2>
+<hr>
+<br>
+<ul>
+<li>DOM Elements - <code>dangerouslySetInnerHTML</code> attribute
+<a href="https://legacy.reactjs.org/docs/dom-elements.html">https://legacy.reactjs.org/docs/dom-elements.html</a></li>
+<li>YouTube Embedded Players and Player Parameters.
+<a href="https://developers.google.com/youtube/player_parameters">https://developers.google.com/youtube/player_parameters</a></li>
+<li>How to embed a video background on a website (fast, loop, autoplay).
+<a href="https://stackoverflow.com/questions/73679219/how-to-embed-a-video-background-on-a-website-fast-loop-autoplay">https://stackoverflow.com/questions/73679219/how-to-embed-a-video-background-on-a-website-fast-loop-autoplay</a></li>
+<li>HTML YouTube Videos.
+<a href="https://www.w3schools.com/html/html_youtube.asp">https://www.w3schools.com/html/html_youtube.asp</a></li>
+<li>Across The Spiderverse - Official Gallery by SONY
+<a href="https://www.acrossthespiderverse.movie/gallery/">https://www.acrossthespiderverse.movie/gallery/</a></li>
+</ul>
+<p><br><br><br><br></p>
+<h4 id="heading">——————————————————————————</h4>
+<p>본 후기는 정보통신산업진흥원(NIPA)에서 주관하는 &lt;AI 서비스 완성! AI+웹개발 취업캠프 - 프론트엔드&amp;백엔드&gt; 과정 학습/프로젝트/과제 기록으로 작성 되었습니다.
+#정보통신산업진흥원 #NIPA #AI교육 #프로젝트 #유데미 #IT개발캠프 #개발자부트캠프 #프론트엔드 #백엔드 #AI웹개발취업캠프 #취업캠프 #개발취업캠프</p>
+
+</div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/ganyunhee/" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+    <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+</body>
+</html>

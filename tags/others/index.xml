@@ -32,11 +32,11 @@ Prerequisites - Git - required to build Hugo from source- required to use hugo 
     </item>
     
     <item>
-      <title>Test</title>
-      <link>http://ganyunhee.github.io/posts/test/</link>
+      <title>ARTICLE FORMAT REFERENCE</title>
+      <link>http://ganyunhee.github.io/posts_temp/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ganyunhee.github.io/posts/test/</guid>
+      <guid>http://ganyunhee.github.io/posts_temp/test/</guid>
       <description>CONTENTS SUMMARY Heading 1 Heading 2 Heading 3 Heading 1 This is some random text under Heading 1. There&amp;rsquo;s not much to say here except that there are a lot of things that should be written and yet they are left unwritten.
 This is some random code in a code block # Here&amp;#39;s a comment in Python Heading 2 This is some random text under Heading 2. There&amp;rsquo;s not much to say here except that there are a lot of things that should be written and yet they are left unwritten.</description>
     </item>

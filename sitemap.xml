@@ -14,16 +14,19 @@
     <loc>http://ganyunhee.github.io/tags/</loc>
     <lastmod>2023-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://ganyunhee.github.io/posts/udemy_req_ai/</loc>
+    <loc>http://ganyunhee.github.io/posts_temp/udemy_req_ai/</loc>
+    <lastmod>2023-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ganyunhee.github.io/posts_temp/</loc>
     <lastmod>2023-08-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://ganyunhee.github.io/posts/aiweb_day25_29/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://ganyunhee.github.io/posts/udemy_req_react_2/</loc>
+    <loc>http://ganyunhee.github.io/posts_temp/udemy_req_react_2/</loc>
     <lastmod>2023-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://ganyunhee.github.io/posts/aiweb_day23/</loc>
+    <loc>http://ganyunhee.github.io/posts_temp/aiweb_day23/</loc>
     <lastmod>2023-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://ganyunhee.github.io/posts/udemy_req_react/</loc>
@@ -94,10 +97,10 @@
   </url><url>
     <loc>http://ganyunhee.github.io/pages/about/</loc>
   </url><url>
+    <loc>http://ganyunhee.github.io/posts_temp/test/</loc>
+  </url><url>
     <loc>http://ganyunhee.github.io/categories/</loc>
   </url><url>
     <loc>http://ganyunhee.github.io/pages/</loc>
-  </url><url>
-    <loc>http://ganyunhee.github.io/posts/test/</loc>
   </url>
 </urlset>
